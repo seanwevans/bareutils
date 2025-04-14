@@ -15,7 +15,7 @@ make
 - ⭕️ `b2sum` Computes and checks BLAKE2b message digest
 - ⭕️ `base32` Encodes or decodes Base32, and prints result to standard output
 - ⭕️ `base64` Encodes or decodes Base64, and prints result to standard output
-- ⭕️ `basename` Removes the path prefix from a given pathname
+- ✅ `basename` Removes the path prefix from a given pathname
 - ⭕️ `basenc` Encodes or decodes various encodings and prints result to standard output
 - ⭕️ `cat` Concatenates and prints files on the standard output
 - ⭕️ `chcon` Changes file security context
