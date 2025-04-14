@@ -50,7 +50,7 @@ make
 - ⭕️ `join` Joins lines of two files on a common field
 - ⭕️ `link` Creates a link to a file
 - ⭕️ `ln` Creates a link to a file
-- ⭕️ `logname` Print the user's login name
+- ✅ `logname` Print the user's login name
 - ⭕️ `ls` List directory contents with formatting
 - ⭕️ `md5sum` Computes and checks MD5 message digest
 - ⭕️ `mkdir` Creates directories
