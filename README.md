@@ -106,7 +106,7 @@ make
 - ✅ `tty` Prints terminal name
 - ✅ `uname` Prints system information
 - ⭕️ `unexpand` Converts spaces to tabs
-- ⭕️ `uniq` Removes duplicate lines from a sorted file
+- ✅ `uniq` Removes duplicate lines from a sorted file
 - ⭕️ `unlink` Removes the specified file using the unlink function
 - ⭕️ `uptime` Tells how long the system has been running
 - ⭕️ `users` Prints the user names of users currently logged into the current host
