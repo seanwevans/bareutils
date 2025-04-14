@@ -103,7 +103,7 @@ make
 - ✅ `true` Does nothing, but exits successfully
 - ⭕️ `truncate` Shrink or extend the size of a file to the specified size
 - ⭕️ `tsort` Performs a topological sort
-- ⭕️ `tty` Prints terminal name
+- ✅ `tty` Prints terminal name
 - ⭕️ `uname` Prints system information
 - ⭕️ `unexpand` Converts spaces to tabs
 - ⭕️ `uniq` Removes duplicate lines from a sorted file
