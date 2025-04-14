@@ -11,7 +11,7 @@ make
 
 
 ## Catalog
-- ⭕️ `arch` Prints machine hardware name
+- ✅ `arch` Prints machine hardware name
 - ⭕️ `b2sum` Computes and checks BLAKE2b message digest
 - ⭕️ `base32` Encodes or decodes Base32, and prints result to standard output
 - ⭕️ `base64` Encodes or decodes Base64, and prints result to standard output
