@@ -32,7 +32,7 @@ make
 - ⭕️ `dd` Copies and converts a file
 - ⭕️ `df` Shows disk free space on file systems
 - ⭕️ `dircolors` Set up color for ls
-- ⭕️ `dirname` Strips non-directory suffix from file name
+- ✅ `dirname` Strips non-directory suffix from file name
 - ⭕️ `du` Shows disk usage on file systems
 - ✅ `echo` Displays a specified line of text
 - ⭕️ `env` Run a program in a modified environment
