@@ -45,7 +45,7 @@ make
 - ⭕️ `groups` Prints the groups of which the user is a member
 - ⭕️ `head` Output the beginning of files
 - ⭕️ `hostid` Prints the numeric identifier for the current host
-- ⭕️ `id` Prints real or effective UID and GID
+- ✅ `id` Prints real or effective UID and GID
 - ⭕️ `install` Copies files and set attributes
 - ⭕️ `join` Joins lines of two files on a common field
 - ⭕️ `link` Creates a link to a file
