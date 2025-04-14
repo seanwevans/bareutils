@@ -1,4 +1,5 @@
 # 🧱 bareutils
+![Progress](https://img.shields.io/badge/progress-23%2F154%20done-brightgreen)
 
 A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
