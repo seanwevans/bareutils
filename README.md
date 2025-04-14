@@ -21,7 +21,7 @@ make
 - ⭕️ `chcon` Changes file security context
 - ⭕️ `chgrp` Changes file group ownership
 - ⭕️ `chmod` Changes the permissions of a file or directory
-- ⭕️ `chown` Changes file ownership
+- ✅ `chown` Changes file ownership
 - ⭕️ `chroot` Changes the root directory
 - ⭕️ `cksum` Checksums (IEEE Ethernet CRC-32) and count the bytes in a file
 - ⭕️ `comm` Compares two sorted files line by line
