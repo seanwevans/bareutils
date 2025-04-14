@@ -1,14 +1,18 @@
 ; src/uname.asm
+
 %include "include/sysdefs.inc"
 
 section .bss
     uts resb 390
 
+section .data
+    newline db 10
+
 section .text
     global _start
 
 _start:
-    mov     rax, 63         ; SYS_uname
+    mov     rax, SYS_UNAME
     mov     rdi, uts
     syscall
 
@@ -29,7 +33,6 @@ _start:
 
     exit 0
 
-; ------------------------------------------------------------
 print_line:
     call strlen
     write 1, rsi, rbx
@@ -45,6 +48,3 @@ strlen:
     jmp .loop
 .done:
     ret
-
-section .data
-    newline db 10

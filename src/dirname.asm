@@ -1,4 +1,8 @@
+; src/dirname.asm
+
 %include "include/sysdefs.inc"
+
+section .bss
 
 section .data
     dot db ".", 0

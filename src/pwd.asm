@@ -5,11 +5,13 @@
 section .bss
     path resb 512
 
+section .data
+
 section .text
     global _start
 
 _start:
-    mov rax, 79         ; SYS_getcwd
+    mov rax, SYS_GETCWD
     mov rdi, path
     mov rsi, 512
     syscall

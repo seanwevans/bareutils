@@ -3,13 +3,15 @@
 %include "include/sysdefs.inc"
 
 section .bss
-    uts resb 390          ; struct utsname is 390 bytes total
+    uts resb 390
+
+section .data
 
 section .text
     global _start
 
 _start:
-    mov     rax, 63             ; SYS_uname
+    mov     rax, SYS_UNAME
     mov     rdi, uts
     syscall
 

@@ -1,4 +1,8 @@
+; src/basename.asm
+
 %include "include/sysdefs.inc"
+
+section .bss
 
 section .data
     newline db 10

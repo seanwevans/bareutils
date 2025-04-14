@@ -1,27 +1,30 @@
-section .data
-    passwd_file db "/etc/passwd", 0
-    newline db 10
-    colon db ":"
+; src/logname.asm
+
+%include "include/sysdefs.inc"
 
 section .bss
     uid_str resb 12         ; Buffer for UID as string + null terminator
     read_buf resb 4096      ; Buffer to read /etc/passwd chunks
     username resb 256       ; Buffer to store the found username
 
+section .data
+    passwd_file db "/etc/passwd", 0
+    newline db 10
+    colon db ":"
+
 section .text
     global _start
 
 _start:
-    ; Get effective user ID
     mov rax, 107            ; syscall number for geteuid
     syscall                 ; rax = euid
     mov r12, rax            ; Store EUID in r12
 
-    ; Convert EUID (r12) to string in uid_str buffer
     mov rdi, uid_str + 10   ; Point to end of uid_str buffer (leave space)
     mov byte [rdi+1], 0     ; Null terminate
     mov rax, r12            ; UID to convert
     mov rbx, 10             ; Divisor
+
 .uid_to_str_loop:
     xor rdx, rdx            ; Clear rdx for division
     div rbx                 ; rax = rax / 10, rdx = rax % 10
@@ -31,37 +34,33 @@ _start:
     test rax, rax           ; Is quotient zero?
     jnz .uid_to_str_loop    ; Loop if not zero
     inc rdi                 ; Point rdi to the start of the UID string
-    ; rdi now points to the start of the ASCII UID string
     mov r13, rdi            ; Store pointer to UID string in r13
 
-    ; Open /etc/passwd
     mov rax, 2              ; syscall number for open
     lea rdi, [rel passwd_file] ; file path
     mov rsi, 0              ; flags = O_RDONLY
     xor rdx, rdx            ; mode = 0
     syscall
-    ; rax = file descriptor (or negative error)
+
     test rax, rax
     js .exit_error          ; Exit if open failed
     mov r14, rax            ; Store file descriptor in r14
 
-    ; Read loop for /etc/passwd
     mov r15, 0              ; r15 = bytes remaining from previous read (unused here)
+
 .read_loop:
     mov rax, 0              ; syscall number for read
     mov rdi, r14            ; file descriptor
     lea rsi, [rel read_buf] ; buffer address
     mov rdx, 4096           ; buffer size
     syscall
-    ; rax = bytes read (or negative error, or 0 for EOF)
+    
     test rax, rax
     jle .not_found          ; Exit if EOF or read error
-
-    ; Process buffer (find lines, parse, compare)
+    
     lea rsi, [rel read_buf] ; rsi = current position in buffer
     mov rcx, rax            ; rcx = bytes read (loop counter)
 .process_line_loop:
-    ; Find end of line or end of buffer
     mov r8, rsi             ; r8 = start of current line/segment
 .find_eol:
     cmp rcx, 0
@@ -73,8 +72,6 @@ _start:
     jmp .find_eol
 
 .found_eol:
-    ; Line found between r8 and rsi
-    ; Parse line: username:password:UID:...
     mov rdx, r8             ; rdx points to start of line
     mov rdi, username       ; Destination buffer for username
 
@@ -119,12 +116,11 @@ _start:
     jmp .uid_compare_loop
 .check_uid_delim:
     cmp byte [rdx], ':'     ; Does the field in the file end here?
-    jne .uid_mismatch       ; No, longer UID in file or different char
-    ; --- MATCH FOUND ---
+    jne .uid_mismatch       ; No, longer UID in file or different char    
     jmp .found_match
 
 .uid_mismatch:
-    ; Skip rest of the line until newline
+    
 .skip_line:
     cmp rdx, rsi
     jge .parse_error        ; Should have hit newline marker stored in rsi
@@ -142,12 +138,10 @@ _start:
     jmp .read_loop          ; Need more data
 
 .found_match:
-    ; Username is already in the 'username' buffer and null-terminated
-    ; Write username to stdout
     mov rax, 1              ; syscall write
     mov rdi, 1              ; fd stdout
     lea rsi, [rel username] ; buffer with username
-    ; Calculate length (simple loop, could optimize)
+    
     mov rdx, 0
     mov r10, rsi
 .calc_len_loop:
@@ -159,21 +153,18 @@ _start:
 .len_done:
     syscall
 
-    ; Write newline
     mov rax, 1
     mov rdi, 1
     lea rsi, [rel newline]
     mov rdx, 1
     syscall
 
-    ; Close file and exit success
     mov rax, 3              ; syscall close
     mov rdi, r14            ; file descriptor
     syscall
     jmp .exit_success
 
 .not_found:
-    ; Close file (if open) and exit error
     cmp r14, 0
     jl .exit_error          ; If FD is already negative (open failed), just exit
     mov rax, 3              ; syscall close

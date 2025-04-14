@@ -1,4 +1,8 @@
-%include "include/sysdefs.inc" ; Assuming this defines exit and maybe SYS_write/stdout
+; src/printenv.asm
+
+%include "include/sysdefs.inc"
+
+section .bss
 
 section .data
     newline db 10
@@ -42,7 +46,6 @@ _start:
     mov rdx, 1              ; Length: 1 byte
     syscall                 ; Write the newline
 
-    ; Advance to next env var
     add r12, 8              ; Move iterator to next envp pointer (envp[i+1])
     jmp .loop_env           ; Repeat
 

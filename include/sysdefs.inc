@@ -6,6 +6,7 @@
 %define SYS_OPEN     2
 %define SYS_CLOSE    3
 %define SYS_UNAME    63
+%define SYS_GETCWD   79
 %define SYS_CHOWN    92
 %define SYS_GETUID   102
 %define SYS_GETEUID  107

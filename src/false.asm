@@ -2,6 +2,10 @@
 
 %include "include/sysdefs.inc"
 
+section .bss
+
+section .data
+
 section .text
     global _start
 

@@ -2,6 +2,8 @@
 
 %include "include/sysdefs.inc"
 
+section .bss
+
 section .data
     msg db "y", 10
     len equ $ - msg

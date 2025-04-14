@@ -1,11 +1,13 @@
+; src/id.asm
+
 %include "include/sysdefs.inc"
 
 section .bss
     groups_buf resd 32        ; 32 * 4 = 128 bytes, 32-bit group IDs
     numbuf resb 16            ; for printing numbers
-    newline db 10
 
 section .data
+    newline db 10
     uid_prefix db "uid=", 0
     gid_prefix db " gid=", 0
     groups_prefix db " groups=", 0
