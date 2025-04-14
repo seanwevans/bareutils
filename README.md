@@ -104,7 +104,7 @@ make
 - ⭕️ `truncate` Shrink or extend the size of a file to the specified size
 - ⭕️ `tsort` Performs a topological sort
 - ✅ `tty` Prints terminal name
-- ⭕️ `uname` Prints system information
+- ✅ `uname` Prints system information
 - ⭕️ `unexpand` Converts spaces to tabs
 - ⭕️ `uniq` Removes duplicate lines from a sorted file
 - ⭕️ `unlink` Removes the specified file using the unlink function
