@@ -61,7 +61,7 @@ make
 - ⭕️ `nice` Modifies scheduling priority
 - ⭕️ `nl` Numbers lines of files
 - ⭕️ `nohup` Allows a command to continue running after logging out
-- ⭕️ `nproc` Queries the number of (active) processors
+- ✅ `nproc` Queries the number of (active) processors
 - ⭕️ `numfmt` Reformat numbers
 - ⭕️ `od` Dumps files in octal and other formats
 - ⭕️ `paste` Merges lines of files
