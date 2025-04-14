@@ -39,7 +39,7 @@ make
 - ⭕️ `expand` Converts tabs to spaces
 - ⭕️ `expr` Evaluates expressions
 - ⭕️ `factor` Factors numbers
-- ⭕️ `false` Does nothing, but exits unsuccessfully
+- ✅ `false` Does nothing, but exits unsuccessfully
 - ⭕️ `fmt` Simple optimal text formatter
 - ⭕️ `fold` Wraps each input line to fit in specified width
 - ⭕️ `groups` Prints the groups of which the user is a member
