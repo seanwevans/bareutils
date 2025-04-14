@@ -34,7 +34,7 @@ make
 - ⭕️ `dircolors` Set up color for ls
 - ⭕️ `dirname` Strips non-directory suffix from file name
 - ⭕️ `du` Shows disk usage on file systems
-- ⭕️ `echo` Displays a specified line of text
+- ✅ `echo` Displays a specified line of text
 - ⭕️ `env` Run a program in a modified environment
 - ⭕️ `expand` Converts tabs to spaces
 - ⭕️ `expr` Evaluates expressions
