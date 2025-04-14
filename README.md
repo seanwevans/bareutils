@@ -25,7 +25,7 @@ make
 - ⭕️ `chroot` Changes the root directory
 - ⭕️ `cksum` Checksums (IEEE Ethernet CRC-32) and count the bytes in a file
 - ⭕️ `comm` Compares two sorted files line by line
-- ⭕️ `cp` Copy files/directories
+- ✅ `cp` Copy files/directories
 - ⭕️ `csplit` Splits a file into sections determined by context lines
 - ⭕️ `cut` Removes sections from each line of files
 - ⭕️ `date` Display or set date and time
