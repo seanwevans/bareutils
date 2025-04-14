@@ -71,7 +71,7 @@ make
 - ⭕️ `printenv` Prints environment variables
 - ⭕️ `printf` Formats and prints data
 - ⭕️ `ptx` Produces a permuted index of file contents
-- ⭕️ `pwd` Prints the current working directory
+- ✅ `pwd` Prints the current working directory
 - ⭕️ `readlink` Displays value of a symbolic link
 - ⭕️ `realpath` Returns the resolved absolute or relative path for a file
 - ⭕️ `rm` Removes files/directories
