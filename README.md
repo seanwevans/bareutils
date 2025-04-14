@@ -85,7 +85,7 @@ make
 - ⭕️ `sha512sum` Computes and checks SHA-1/SHA-2 message digests
 - ⭕️ `shred` Overwrites a file to hide its contents, and optionally deletes it
 - ⭕️ `shuf` generates random permutations
-- ⭕️ `sleep` Delays for a specified amount of time
+- ✅ `sleep` Delays for a specified amount of time
 - ⭕️ `sort` sorts lines of text files
 - ⭕️ `split` Splits a file into pieces
 - ⭕️ `stat` Returns data about an inode
