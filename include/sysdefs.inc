@@ -1,15 +1,15 @@
 ; include/sysdefs.inc
 
-%define SYS_READ     0
-%define SYS_WRITE    1
-%define SYS_OPEN     2
-%define SYS_CLOSE    3
-%define SYS_EXIT     60
-%define SYS_UNAME    63
-%define SYS_GETCWD   79
-%define SYS_CHOWN    92
-%define SYS_GETUID   102
-%define SYS_GETEUID  107
+%define SYS_READ      0
+%define SYS_WRITE     1
+%define SYS_OPEN      2
+%define SYS_CLOSE     3
+%define SYS_EXIT      60
+%define SYS_UNAME     63
+%define SYS_GETCWD    79
+%define SYS_CHOWN     92
+%define SYS_GETUID    102
+%define SYS_GETEUID   107
 
 %define STDIN_FILENO  0
 %define STDOUT_FILENO 1
@@ -24,16 +24,16 @@
 ; See `man utmp` or /usr/include/utmp.h for details on your system
 %define UTMP_SIZE 384
 
-%define UT_TYPE_OFF    0   ; short   ut_type;      (Offset 0, Size 2)
-%define UT_PID_OFF     4   ; pid_t   ut_pid;       (Offset 4, Size 4)
-%define UT_LINE_OFF    8   ; char    ut_line[32];  (Offset 8, Size 32)
-%define UT_ID_OFF      40  ; char    ut_id[4];     (Offset 40, Size 4)
-%define UT_USER_OFF    44  ; char    ut_user[32];  (Offset 44, Size 32)
-%define UT_HOST_OFF    76  ; char    ut_host[256]; (Offset 76, Size 256)
-%define UT_EXIT_OFF    332 ; struct  exit_status;  (Offset 332, Size 4)
-%define UT_SESSION_OFF 336 ; int32_t ut_session;   (Offset 336, Size 4)
-%define UT_TV_OFF      340 ; struct  timeval32;  (Offset 340, Size 8)
-%define UT_ADDR_OFF    348 ; int32_t ut_addr_v6[4];(Offset 348, Size 16)
+%define UT_TYPE_OFF    0    ; short   ut_type;       (Offset 0, Size 2)
+%define UT_PID_OFF     4    ; pid_t   ut_pid;        (Offset 4, Size 4)
+%define UT_LINE_OFF    8    ; char    ut_line[32];   (Offset 8, Size 32)
+%define UT_ID_OFF      40   ; char    ut_id[4];      (Offset 40, Size 4)
+%define UT_USER_OFF    44   ; char    ut_user[32];   (Offset 44, Size 32)
+%define UT_HOST_OFF    76   ; char    ut_host[256];  (Offset 76, Size 256)
+%define UT_EXIT_OFF    332  ; struct  exit_status;   (Offset 332, Size 4)
+%define UT_SESSION_OFF 336  ; int32_t ut_session;    (Offset 336, Size 4)
+%define UT_TV_OFF      340  ; struct  timeval32;   (Offset 340, Size 8)
+%define UT_ADDR_OFF    348  ; int32_t ut_addr_v6[4]; (Offset 348, Size 16)
 
 ; utmp record types (from /usr/include/utmp.h)
 %define EMPTY         0 ; Record does not contain valid info
@@ -46,6 +46,13 @@
 %define USER_PROCESS  7 ; Normal user process
 %define DEAD_PROCESS  8 ; Terminated process
 %define ACCOUNTING    9 ; Not used?
+
+; --- Added for wc ---
+%define WHITESPACE_SPACE 32 ; ' '
+%define WHITESPACE_TAB   9  ; '\t'
+%define WHITESPACE_NL    10 ; '\n'
+; --- End Added ---
+
 
 ; Convenience macro for exit(status)
 %macro exit 1
