@@ -68,7 +68,7 @@ make
 - ⭕️ `pathchk` Checks whether file names are valid or portable
 - ⭕️ `pinky` A lightweight version of finger
 - ⭕️ `pr` Converts text files for printing
-- ⭕️ `printenv` Prints environment variables
+- ✅ `printenv` Prints environment variables
 - ⭕️ `printf` Formats and prints data
 - ⭕️ `ptx` Produces a permuted index of file contents
 - ✅ `pwd` Prints the current working directory
