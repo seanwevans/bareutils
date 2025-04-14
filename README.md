@@ -1,6 +1,6 @@
 # 🧱 bareutils
 
-A reimplementation of `coreutils` in x86_64 assembly using direct syscalls only — no libc or dependencies.
+A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
 
 ## 🛠 Build Instructions
@@ -10,74 +10,129 @@ make
 ```
 
 
-## Catalog
+## Implemented
 - ✅ `arch` Prints machine hardware name
+- ✅ `basename` Removes the path prefix from a given pathname
+- ✅ `chown` Changes file ownership
+- ✅ `cp` Copy files/directories
+- ✅ `dirname` Strips non-directory suffix from file name
+- ✅ `echo` Displays a specified line of text
+- ✅ `false` Does nothing, but exits unsuccessfully
+- ✅ `id` Prints real or effective UID and GID
+- ✅ `logname` Print the user's login name
+- ✅ `nproc` Queries the number of (active) processors
+- ✅ `printenv` Prints environment variables
+- ✅ `pwd` Prints the current working directory
+- ✅ `sleep` Delays for a specified amount of time
+- ✅ `tee` Sends output to multiple files
+- ✅ `tr` Translates or deletes characters
+- ✅ `true` Does nothing, but exits successfully
+- ✅ `tty` Prints terminal name
+- ✅ `uname` Prints system information
+- ✅ `uniq` Removes duplicate lines from a sorted file
+- ✅ `wc` Prints the number of bytes, words, and lines in files
+- ✅ `who` Prints a list of all users currently logged in
+- ✅ `whoami` Prints the effective userid
+- ✅ `yes` Prints a string repeatedly
+
+
+## To Implement
+- ⭕️ `alias` Defines or displays aliases
+- ⭕️ `ar` Creates and maintains libraries
+- ⭕️ `at` Executes commands at a later time
+- ⭕️ `awk` Pattern scanning and processing language
 - ⭕️ `b2sum` Computes and checks BLAKE2b message digest
 - ⭕️ `base32` Encodes or decodes Base32, and prints result to standard output
 - ⭕️ `base64` Encodes or decodes Base64, and prints result to standard output
-- ✅ `basename` Removes the path prefix from a given pathname
 - ⭕️ `basenc` Encodes or decodes various encodings and prints result to standard output
-- ⭕️ `cat` Concatenates and prints files on the standard output
+- ⭕️ `batch` Schedules commands to be executed in a batch queue
+- ⭕️ `bc` Arbitrary-precision arithmetic language
+- ⭕️ `cat` Concatenates and prints files
+- ⭕️ `cd` Changes the working directory
 - ⭕️ `chcon` Changes file security context
 - ⭕️ `chgrp` Changes file group ownership
 - ⭕️ `chmod` Changes the permissions of a file or directory
-- ✅ `chown` Changes file ownership
 - ⭕️ `chroot` Changes the root directory
 - ⭕️ `cksum` Checksums (IEEE Ethernet CRC-32) and count the bytes in a file
+- ⭕️ `cmp` Compares two files; see also diff
 - ⭕️ `comm` Compares two sorted files line by line
-- ✅ `cp` Copy files/directories
+- ⭕️ `command` Executes a simple command
+- ⭕️ `crontab` Schedule periodic background work
 - ⭕️ `csplit` Splits a file into sections determined by context lines
 - ⭕️ `cut` Removes sections from each line of files
-- ⭕️ `date` Display or set date and time
+- ⭕️ `date` Sets or displays the date and time
 - ⭕️ `dd` Copies and converts a file
 - ⭕️ `df` Shows disk free space on file systems
+- ⭕️ `diff` Compare two files; see also cmp
 - ⭕️ `dircolors` Set up color for ls
-- ✅ `dirname` Strips non-directory suffix from file name
 - ⭕️ `du` Shows disk usage on file systems
-- ✅ `echo` Displays a specified line of text
+- ⭕️ `ed` The standard text editor
 - ⭕️ `env` Run a program in a modified environment
 - ⭕️ `expand` Converts tabs to spaces
+- ⭕️ `expr` Evaluate arguments as an expression
 - ⭕️ `expr` Evaluates expressions
 - ⭕️ `factor` Factors numbers
-- ✅ `false` Does nothing, but exits unsuccessfully
+- ⭕️ `file` Determine file type
+- ⭕️ `find` Find files
 - ⭕️ `fmt` Simple optimal text formatter
 - ⭕️ `fold` Wraps each input line to fit in specified width
+- ⭕️ `gencat` Generate a formatted message catalog
+- ⭕️ `getconf` Get configuration values
+- ⭕️ `getopts` Parse utility options
+- ⭕️ `gettext` Retrieve text string from messages object
+- ⭕️ `grep` Search text for a pattern
 - ⭕️ `groups` Prints the groups of which the user is a member
+- ⭕️ `hash` Hash database access method
 - ⭕️ `head` Output the beginning of files
 - ⭕️ `hostid` Prints the numeric identifier for the current host
-- ✅ `id` Prints real or effective UID and GID
+- ⭕️ `iconv` Codeset conversion
 - ⭕️ `install` Copies files and set attributes
-- ⭕️ `join` Joins lines of two files on a common field
+- ⭕️ `join` Merges two sorted text files based on the presence of a common field
+- ⭕️ `kill` Terminate or signal processes
 - ⭕️ `link` Creates a link to a file
 - ⭕️ `ln` Creates a link to a file
-- ✅ `logname` Print the user's login name
+- ⭕️ `locale` Get locale-specific information
+- ⭕️ `localedef` Define locale environment
+- ⭕️ `logger` Log messages
+- ⭕️ `lp` Send files to a printer
 - ⭕️ `ls` List directory contents with formatting
+- ⭕️ `m4` Macro processor
+- ⭕️ `mailx` Process messages
+- ⭕️ `man` Display system documentation
 - ⭕️ `md5sum` Computes and checks MD5 message digest
+- ⭕️ `mesg` Permit or deny messages
 - ⭕️ `mkdir` Creates directories
 - ⭕️ `mkfifo` Makes named pipes (FIFOs)
 - ⭕️ `mknod` Makes block or character special files
 - ⭕️ `mktemp` Creates a temporary file or directory
+- ⭕️ `msgfmt` Create messages objects from messages object files
 - ⭕️ `mv` Moves files or rename files
+- ⭕️ `newgrp` Change to a new group
+- ⭕️ `ngettext` Retrieve text string from messages object with plural form
 - ⭕️ `nice` Modifies scheduling priority
 - ⭕️ `nl` Numbers lines of files
 - ⭕️ `nohup` Allows a command to continue running after logging out
-- ✅ `nproc` Queries the number of (active) processors
 - ⭕️ `numfmt` Reformat numbers
 - ⭕️ `od` Dumps files in octal and other formats
-- ⭕️ `paste` Merges lines of files
+- ⭕️ `paste` Merge corresponding or subsequent lines of files
+- ⭕️ `patch` Apply changes to files
 - ⭕️ `pathchk` Checks whether file names are valid or portable
+- ⭕️ `pax` Portable archive interchange
 - ⭕️ `pinky` A lightweight version of finger
-- ⭕️ `pr` Converts text files for printing
-- ✅ `printenv` Prints environment variables
+- ⭕️ `pr` Paginate or columnate files for printing
 - ⭕️ `printf` Formats and prints data
+- ⭕️ `ps` Report process status
 - ⭕️ `ptx` Produces a permuted index of file contents
-- ✅ `pwd` Prints the current working directory
-- ⭕️ `readlink` Displays value of a symbolic link
+- ⭕️ `read` Read a line from standard input
+- ⭕️ `readlink` Print destination of a symbolic link
 - ⭕️ `realpath` Returns the resolved absolute or relative path for a file
+- ⭕️ `renice` Set nice values of running processes
 - ⭕️ `rm` Removes files/directories
 - ⭕️ `rmdir` Removes empty directories
 - ⭕️ `runcon` Run command with specified security context
+- ⭕️ `sed` Stream editor
 - ⭕️ `seq` Prints a sequence of numbers
+- ⭕️ `sh` Shell, the standard command language interpreter
 - ⭕️ `sha1sum` Computes and checks SHA-1/SHA-2 message digests
 - ⭕️ `sha224sum` Computes and checks SHA-1/SHA-2 message digests
 - ⭕️ `sha256sum` Computes and checks SHA-1/SHA-2 message digests
@@ -85,32 +140,32 @@ make
 - ⭕️ `sha512sum` Computes and checks SHA-1/SHA-2 message digests
 - ⭕️ `shred` Overwrites a file to hide its contents, and optionally deletes it
 - ⭕️ `shuf` generates random permutations
-- ✅ `sleep` Delays for a specified amount of time
-- ⭕️ `sort` sorts lines of text files
+- ⭕️ `sort` Sorts lines of text files
 - ⭕️ `split` Splits a file into pieces
 - ⭕️ `stat` Returns data about an inode
 - ⭕️ `stdbuf` Controls buffering for commands that use stdio
+- ⭕️ `strings` Find printable strings in files
 - ⭕️ `stty` Changes and prints terminal line settings
 - ⭕️ `sum` Checksums and counts the blocks in a file
 - ⭕️ `sync` Flushes file system buffers
+- ⭕️ `tabs` Set terminal tabs
 - ⭕️ `tac` Concatenates and prints files in reverse order line by line
 - ⭕️ `tail` Output the end of files
-- ✅ `tee` Sends output to multiple files
 - ⭕️ `test` Evaluates an expression
+- ⭕️ `time` Display elapsed, system and kernel time used by the current shell or designated process.
 - ⭕️ `timeout` Runs a command with a time limit
 - ⭕️ `touch` Changes file timestamps; creates file
-- ✅ `tr` Translates or deletes characters
-- ✅ `true` Does nothing, but exits successfully
+- ⭕️ `tput` Change terminal characteristics
 - ⭕️ `truncate` Shrink or extend the size of a file to the specified size
 - ⭕️ `tsort` Performs a topological sort
-- ✅ `tty` Prints terminal name
-- ✅ `uname` Prints system information
+- ⭕️ `umask` Get or set the file mode creation mask
+- ⭕️ `unalias` Remove alias definitions
 - ⭕️ `unexpand` Converts spaces to tabs
-- ✅ `uniq` Removes duplicate lines from a sorted file
 - ⭕️ `unlink` Removes the specified file using the unlink function
 - ⭕️ `uptime` Tells how long the system has been running
 - ⭕️ `users` Prints the user names of users currently logged into the current host
-- ✅ `wc` Prints the number of bytes, words, and lines in files
-- ✅ `who` Prints a list of all users currently logged in
-- ✅ `whoami` Prints the effective userid
-- ✅ `yes` Prints a string repeatedly
+- ⭕️ `uudecode` Decode a binary file
+- ⭕️ `uuencode` Encode a binary file
+- ⭕️ `wait` Await process completion
+- ⭕️ `write` Write to another user's terminal
+- ⭕️ `xargs` Construct argument lists and invoke utility
