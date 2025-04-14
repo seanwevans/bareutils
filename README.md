@@ -111,6 +111,6 @@ make
 - ⭕️ `uptime` Tells how long the system has been running
 - ⭕️ `users` Prints the user names of users currently logged into the current host
 - ⭕️ `wc` Prints the number of bytes, words, and lines in files
-- ⭕️ `who` Prints a list of all users currently logged in
+- ✅ `who` Prints a list of all users currently logged in
 - ✅ `whoami` Prints the effective userid
 - ✅ `yes` Prints a string repeatedly
