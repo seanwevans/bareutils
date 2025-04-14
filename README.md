@@ -95,7 +95,7 @@ make
 - ⭕️ `sync` Flushes file system buffers
 - ⭕️ `tac` Concatenates and prints files in reverse order line by line
 - ⭕️ `tail` Output the end of files
-- ⭕️ `tee` Sends output to multiple files
+- ✅ `tee` Sends output to multiple files
 - ⭕️ `test` Evaluates an expression
 - ⭕️ `timeout` Runs a command with a time limit
 - ⭕️ `touch` Changes file timestamps; creates file

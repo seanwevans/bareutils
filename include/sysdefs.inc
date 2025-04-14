@@ -11,31 +11,36 @@
 %define SYS_GETUID    102
 %define SYS_GETEUID   107
 
-%define STDIN_FILENO  0
-%define STDOUT_FILENO 1
-%define STDERR_FILENO 2
+%define STDIN_FILENO   0
+%define STDOUT_FILENO  1
+%define STDERR_FILENO  2
 
-%define O_RDONLY 0
+%define O_RDONLY   0
+%define O_WRONLY   1
+%define O_RDWR     2
+%define O_CREAT    64
+%define O_TRUNC    512
+%define O_APPEND   1024
 
-%define UT_LINESIZE 32  ; Size of tty line field
-%define UT_NAMESIZE 32  ; Size of username field
-%define UT_HOSTSIZE 256 ; Size of hostname field (not used here)
+%define DEFAULT_MODE 0o644 ; rw-r--r--
 
-; See `man utmp` or /usr/include/utmp.h for details on your system
+%define UT_LINESIZE 32   ; Size of tty line field
+%define UT_NAMESIZE 32   ; Size of username field
+%define UT_HOSTSIZE 256  ; Size of hostname field
+
 %define UTMP_SIZE 384
 
-%define UT_TYPE_OFF    0    ; short   ut_type;       (Offset 0, Size 2)
-%define UT_PID_OFF     4    ; pid_t   ut_pid;        (Offset 4, Size 4)
-%define UT_LINE_OFF    8    ; char    ut_line[32];   (Offset 8, Size 32)
-%define UT_ID_OFF      40   ; char    ut_id[4];      (Offset 40, Size 4)
-%define UT_USER_OFF    44   ; char    ut_user[32];   (Offset 44, Size 32)
-%define UT_HOST_OFF    76   ; char    ut_host[256];  (Offset 76, Size 256)
+%define UT_TYPE_OFF    0    ; short   ut_type;       (Offset 0,   Size 2)
+%define UT_PID_OFF     4    ; pid_t   ut_pid;        (Offset 4,   Size 4)
+%define UT_LINE_OFF    8    ; char    ut_line[32];   (Offset 8,   Size 32)
+%define UT_ID_OFF      40   ; char    ut_id[4];      (Offset 40,  Size 4)
+%define UT_USER_OFF    44   ; char    ut_user[32];   (Offset 44,  Size 32)
+%define UT_HOST_OFF    76   ; char    ut_host[256];  (Offset 76,  Size 256)
 %define UT_EXIT_OFF    332  ; struct  exit_status;   (Offset 332, Size 4)
 %define UT_SESSION_OFF 336  ; int32_t ut_session;    (Offset 336, Size 4)
-%define UT_TV_OFF      340  ; struct  timeval32;   (Offset 340, Size 8)
+%define UT_TV_OFF      340  ; struct  timeval32;     (Offset 340, Size 8)
 %define UT_ADDR_OFF    348  ; int32_t ut_addr_v6[4]; (Offset 348, Size 16)
 
-; utmp record types (from /usr/include/utmp.h)
 %define EMPTY         0 ; Record does not contain valid info
 %define RUN_LVL       1 ; Change in system run-level
 %define BOOT_TIME     2 ; Time of system boot
@@ -52,7 +57,6 @@
 %define WHITESPACE_TAB   9  ; '\t'
 %define WHITESPACE_NL    10 ; '\n'
 ; --- End Added ---
-
 
 ; Convenience macro for exit(status)
 %macro exit 1
