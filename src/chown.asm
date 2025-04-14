@@ -1,5 +1,9 @@
 ; src/chown.asm
 
+%include "include/sysdefs.inc"
+
+section .bss
+
 section .data
     usage_msg db "Usage: chown_numeric UID[:GID] file", 10
     usage_len equ $ - usage_msg
@@ -10,8 +14,6 @@ section .data
     error_argv db "Argument error", 10       ; Generic argument error
     error_argv_len equ $ - error_argv
     colon db ":"
-
-section .bss
 
 section .text
     global _start
@@ -24,8 +26,8 @@ _start:
     mov r13, [rsp+16]       ; r13 = argv[1] (owner/group spec)
     mov r14, [rsp+24]       ; r14 = argv[2] (file path)
 
-    mov r8d, -1             ; r8d = target UID (using r8d for esi later)
-    mov r9d, -1             ; r9d = target GID (using r9d for edx later)
+    mov r8d, 0xFFFFFFFF     ; r8d = target UID (using r8d for esi later)
+    mov r9d, 0xFFFFFFFF     ; r9d = target GID (using r9d for edx later)
 
     mov rdi, r13            ; String to parse
     xor rcx, rcx            ; Use rcx as index/pointer within spec string
@@ -149,8 +151,10 @@ parse_uint:
     add al, dl              ; Add the new digit (only low 8 bits needed)
     jnc .digit_added        ; Check carry after addition
     
-    test rax, 0xFFFFFFFF00000000 ; Did it overflow 32 bits?
-    jnz .error              ; Overflow into high 32 bits
+    mov r11, 0xFFFFFFFF00000000
+    test rax, r11
+    jnz .error
+
 
 .digit_added:
     inc rcx
@@ -160,8 +164,10 @@ parse_uint:
     cmp rcx, 0
     je .error
     
-    test rax, 0xFFFFFFFF00000000
+    mov r11, 0xFFFFFFFF00000000
+    test rax, r11
     jnz .error
+
     
     clc
     ret
