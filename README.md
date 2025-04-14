@@ -100,7 +100,7 @@ make
 - ⭕️ `timeout` Runs a command with a time limit
 - ⭕️ `touch` Changes file timestamps; creates file
 - ⭕️ `tr` Translates or deletes characters
-- ⭕️ `true` Does nothing, but exits successfully
+- ✅ `true` Does nothing, but exits successfully
 - ⭕️ `truncate` Shrink or extend the size of a file to the specified size
 - ⭕️ `tsort` Performs a topological sort
 - ⭕️ `tty` Prints terminal name
