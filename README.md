@@ -1,5 +1,5 @@
 # 🧱 bareutils
-![Progress](https://img.shields.io/badge/progress-26%2F154%20done-brightgreen)
+![Progress](https://img.shields.io/badge/progress-27%2F154%20done-brightgreen)
 
 A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
@@ -117,7 +117,7 @@ make
 - [`rmdir`](src/rmdir.asm) ✅ Removes empty directories
 - [`runcon`](src/runcon.asm) Run command with specified security context
 - [`sed`](src/sed.asm) Stream editor
-- [`seq`](src/seq.asm) Prints a sequence of numbers
+- [`seq`](src/seq.asm) ✅ Prints a sequence of numbers
 - [`sh`](src/sh.asm) Shell, the standard command language interpreter
 - [`sha1sum`](src/sha1sum.asm) Computes and checks SHA-1/SHA-2 message digests
 - [`sha224sum`](src/sha224sum.asm) Computes and checks SHA-1/SHA-2 message digests
