@@ -1,5 +1,5 @@
 # 🧱 bareutils
-![Progress](https://img.shields.io/badge/progress-25%2F154%20done-brightgreen)
+![Progress](https://img.shields.io/badge/progress-26%2F154%20done-brightgreen)
 
 A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
@@ -25,7 +25,7 @@ make
 - [`batch`](src/batch.asm) Schedules commands to be executed in a batch queue
 - [`bc`](src/bc.asm) Arbitrary-precision arithmetic language
 - [`cat`](src/cat.asm) Concatenates and prints files
-- [`cd`](src/cd.asm) Changes the working directory
+- [`cd`](src/cd.asm) ✅ Changes the working directory
 - [`chcon`](src/chcon.asm) Changes file security context
 - [`chgrp`](src/chgrp.asm) Changes file group ownership
 - [`chmod`](src/chmod.asm) Changes the permissions of a file or directory
