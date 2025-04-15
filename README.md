@@ -1,5 +1,5 @@
 # 🧱 bareutils
-![Progress](https://img.shields.io/badge/progress-23%2F154%20done-brightgreen)
+![Progress](https://img.shields.io/badge/progress-25%2F154%20done-brightgreen)
 
 A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
@@ -114,7 +114,7 @@ make
 - [`realpath`](src/realpath.asm) Returns the resolved absolute or relative path for a file
 - [`renice`](src/renice.asm) Set nice values of running processes
 - [`rm`](src/rm.asm) Removes files/directories
-- [`rmdir`](src/rmdir.asm) Removes empty directories
+- [`rmdir`](src/rmdir.asm) ✅ Removes empty directories
 - [`runcon`](src/runcon.asm) Run command with specified security context
 - [`sed`](src/sed.asm) Stream editor
 - [`seq`](src/seq.asm) Prints a sequence of numbers
