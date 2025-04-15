@@ -4,15 +4,25 @@
 %define SYS_WRITE       1
 %define SYS_OPEN        2
 %define SYS_CLOSE       3
+%define SYS_STAT        4
+%define SYS_LSEEK       8
+
 %define SYS_EXIT        60
 %define SYS_UNAME       63
+
+%define SYS_TRUNCATE    76
+%define SYS_FTRUNCATE   77
 %define SYS_GETCWD      79
+
 %define SYS_CHDIR       80
 %define SYS_RMDIR       84
+
 %define SYS_CHOWN       92
 %define SYS_SYSINFO     99
+
 %define SYS_GETUID      102
 %define SYS_GETEUID     107
+
 %define SYS_TIME        201
 %define SYS_GETENV      211
 
@@ -64,15 +74,15 @@
 ; exit(status)
 %macro exit 1
     mov rax, SYS_EXIT
-    mov rdi, %1
+    mov rdi, %1                 ; exit code
     syscall
 %endmacro
 
 ; write(fd, buf, len)
 %macro write 3
     mov rax, SYS_WRITE
-    mov rdi, %1       ; file descriptor
-    mov rsi, %2       ; buffer address
-    mov rdx, %3       ; buffer length
+    mov rdi, %1                 ; file descriptor
+    mov rsi, %2                 ; buffer address
+    mov rdx, %3                 ; buffer length
     syscall
 %endmacro

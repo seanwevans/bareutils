@@ -1,5 +1,5 @@
 # 🧱 bareutils
-![Progress](https://img.shields.io/badge/progress-28%2F154%20done-brightgreen)
+![Progress](https://img.shields.io/badge/progress-29%2F154%20done-brightgreen)
 
 A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
@@ -146,7 +146,7 @@ make
 - [`tput`](src/tput.asm) Change terminal characteristics
 - [`tr`](src/tr.asm) ✅ Translates or deletes characters
 - [`true`](src/true.asm) ✅ Does nothing, but exits successfully
-- [`truncate`](src/truncate.asm) Shrink or extend the size of a file to the specified size
+- [`truncate`](src/truncate.asm) ✅ Shrink the size of a file to the specified size
 - [`tsort`](src/tsort.asm) Performs a topological sort
 - [`tty`](src/tty.asm) ✅ Prints terminal name
 - [`umask`](src/umask.asm) Get or set the file mode creation mask
