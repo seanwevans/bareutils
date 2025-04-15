@@ -1,4 +1,4 @@
-# bareutils makefile
+# Baloo makefile
 
 ASM=nasm
 LD=ld

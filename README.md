@@ -1,15 +1,18 @@
-# 🧱 bareutils
-![Progress](https://img.shields.io/badge/progress-38%2F154%20done-brightgreen)
-
-A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
-
+# Baloo 🐻 ![Progress](https://img.shields.io/badge/progress-38%2F154%20done-brightgreen)
+Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/The_second_jungle_book_%281895%29_%28Baloo%29.jpg" title=" भालू "></img></center>
 
 ## 🛠 Build Instructions
-
-```bash
+simply run
+```
 make
 ```
-
+or
+```
+nasm -f elf64 <input_file.asm> -o <output_binary_name>.o
+ld -o <output_binary_name> <output_binary_name>.o
+```
+for whichever `.asm` in `src` you want to compile.
 
 ## Catalog
 - [`alias`](src/alias.asm) Defines or displays aliases
