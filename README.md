@@ -51,7 +51,7 @@ make
 - [`env`](src/env.asm) Run a program in a modified environment
 - [`expand`](src/expand.asm) ✅ Converts tabs to spaces
 - [`expr`](src/expr.asm) Evaluates expressions
-- [`factor`](src/factor.asm) Factors numbers
+- [`factor`](src/factor.asm) ✅ Factors numbers
 - [`false`](src/false.asm) ✅ Does nothing, but exits unsuccessfully
 - [`file`](src/file.asm) Determine file type
 - [`find`](src/find.asm) Find files
