@@ -10,8 +10,10 @@
 %define SYS_CHDIR       80
 %define SYS_RMDIR       84
 %define SYS_CHOWN       92
+%define SYS_SYSINFO     99
 %define SYS_GETUID      102
 %define SYS_GETEUID     107
+%define SYS_TIME        201
 %define SYS_GETENV      211
 
 %define STDIN_FILENO    0

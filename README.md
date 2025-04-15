@@ -1,5 +1,5 @@
 # 🧱 bareutils
-![Progress](https://img.shields.io/badge/progress-27%2F154%20done-brightgreen)
+![Progress](https://img.shields.io/badge/progress-28%2F154%20done-brightgreen)
 
 A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
@@ -155,7 +155,7 @@ make
 - [`unexpand`](src/unexpand.asm) Converts spaces to tabs
 - [`uniq`](src/uniq.asm) ✅ Removes duplicate lines from a sorted file
 - [`unlink`](src/unlink.asm) Removes the specified file using the unlink function
-- [`uptime`](src/uptime.asm) Tells how long the system has been running
+- [`uptime`](src/uptime.asm) ✅ Tells how long the system has been running
 - [`users`](src/users.asm) Prints the user names of users currently logged into the current host
 - [`uudecode`](src/uudecode.asm) Decode a binary file
 - [`uuencode`](src/uuencode.asm) Encode a binary file
