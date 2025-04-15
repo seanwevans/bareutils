@@ -1,5 +1,5 @@
 # 🧱 bareutils
-![Progress](https://img.shields.io/badge/progress-34%2F154%20done-brightgreen)
+![Progress](https://img.shields.io/badge/progress-35%2F154%20done-brightgreen)
 
 A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
@@ -152,7 +152,7 @@ make
 - [`umask`](src/umask.asm) ✅ Get or set the file mode creation mask
 - [`unalias`](src/unalias.asm) Remove alias definitions
 - [`uname`](src/uname.asm) ✅ Prints system information
-- [`unexpand`](src/unexpand.asm) Converts spaces to tabs
+- [`unexpand`](src/unexpand.asm) ✅ Converts spaces to tabs
 - [`uniq`](src/uniq.asm) ✅ Removes duplicate lines from a sorted file
 - [`unlink`](src/unlink.asm) Removes the specified file using the unlink function
 - [`uptime`](src/uptime.asm) ✅ Tells how long the system has been running
