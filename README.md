@@ -1,5 +1,5 @@
 # 🧱 bareutils
-![Progress](https://img.shields.io/badge/progress-31%2F154%20done-brightgreen)
+![Progress](https://img.shields.io/badge/progress-32%2F154%20done-brightgreen)
 
 A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
@@ -149,7 +149,7 @@ make
 - [`truncate`](src/truncate.asm) ✅ Shrink the size of a file to the specified size
 - [`tsort`](src/tsort.asm) Performs a topological sort
 - [`tty`](src/tty.asm) ✅ Prints terminal name
-- [`umask`](src/umask.asm) Get or set the file mode creation mask
+- [`umask`](src/umask.asm) ✅ Get or set the file mode creation mask
 - [`unalias`](src/unalias.asm) Remove alias definitions
 - [`uname`](src/uname.asm) ✅ Prints system information
 - [`unexpand`](src/unexpand.asm) Converts spaces to tabs

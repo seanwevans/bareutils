@@ -18,6 +18,7 @@
 %define SYS_RMDIR       84
 
 %define SYS_CHOWN       92
+%define SYS_UMASK       95
 %define SYS_SYSINFO     99
 
 %define SYS_GETUID      102
