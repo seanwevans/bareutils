@@ -1,5 +1,5 @@
 # 🧱 bareutils
-![Progress](https://img.shields.io/badge/progress-32%2F154%20done-brightgreen)
+![Progress](https://img.shields.io/badge/progress-34%2F154%20done-brightgreen)
 
 A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
@@ -49,7 +49,7 @@ make
 - [`echo`](src/echo.asm) ✅ Displays a specified line of text
 - [`ed`](src/ed.asm) The standard text editor
 - [`env`](src/env.asm) Run a program in a modified environment
-- [`expand`](src/expand.asm) Converts tabs to spaces
+- [`expand`](src/expand.asm) ✅ Converts tabs to spaces
 - [`expr`](src/expr.asm) Evaluates expressions
 - [`factor`](src/factor.asm) Factors numbers
 - [`false`](src/false.asm) ✅ Does nothing, but exits unsuccessfully

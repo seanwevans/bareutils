@@ -1,0 +1,100 @@
+; src/expand.asm
+
+%include "include/sysdefs.inc"
+
+section .bss
+    in_buffer   resb buffer_size ; Input buffer
+    out_buffer  resb buffer_size ; Output buffer
+    col_pos     resq 1           ; Current column position
+
+section .data
+    tab_size    equ 8           ; Default tab size (8 spaces)
+    buffer_size equ 4096        ; Size of input/output buffers
+
+section .text
+    global _start
+
+_start:
+    mov qword [col_pos], 0
+
+process_input:
+    mov rax, SYS_READ
+    mov rdi, STDIN_FILENO
+    mov rsi, in_buffer
+    mov rdx, buffer_size
+    syscall
+
+    cmp rax, 0
+    jle exit_program
+
+    mov rcx, rax        ; rcx = number of bytes read
+    mov rsi, in_buffer  ; rsi = input buffer pointer
+    mov rdi, out_buffer ; rdi = output buffer pointer
+    mov r8, 0           ; r8 = input index
+    mov r9, 0           ; r9 = output index
+    
+process_char:
+    cmp r8, rcx
+    jge write_output
+
+    movzx rax, byte [rsi + r8]
+    inc r8
+
+    cmp al, 9           ; tab
+    je handle_tab
+
+    cmp al, 10          ; newline
+    je handle_newline
+
+    mov [rdi + r9], al
+    inc r9
+
+    inc qword [col_pos]
+    jmp check_buffer_full
+    
+handle_tab:
+
+    mov rax, [col_pos]
+    mov rbx, tab_size
+    xor rdx, rdx
+    div rbx
+    mov rax, tab_size
+    sub rax, rdx        ; rax = spaces needed
+
+    mov rdx, rax        ; rdx = spaces to add
+    add qword [col_pos], rdx  ; Update column position
+    
+add_spaces:
+    cmp rdx, 0
+    je check_buffer_full
+
+    mov byte [rdi + r9], WHITESPACE_SPACE
+    inc r9
+    dec rdx
+    jmp add_spaces
+    
+handle_newline:
+
+    mov byte [rdi + r9], al
+    inc r9
+
+    mov qword [col_pos], 0
+    
+check_buffer_full:
+
+    cmp r9, buffer_size - tab_size
+    jl process_char
+    
+write_output:
+
+    mov rax, SYS_WRITE
+    mov rdi, STDOUT_FILENO
+    mov rsi, out_buffer
+    mov rdx, r9
+    syscall
+
+    jmp process_input
+    
+exit_program:
+
+    exit 0
