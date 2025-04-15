@@ -27,6 +27,12 @@
 %define SYS_TIME        201
 %define SYS_GETENV      211
 
+%define SYS_UTIMENSAT   280
+
+%define AT_FDCWD       -100     ; Used for relative paths with utimensat
+%define SEEK_SET          0
+
+
 %define STDIN_FILENO    0
 %define STDOUT_FILENO   1
 %define STDERR_FILENO   2
