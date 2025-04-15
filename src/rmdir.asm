@@ -2,8 +2,6 @@
 
 %include "include/sysdefs.inc"
 
-%define SYS_RMDIR 84                ; Define syscall number for rmdir
-
 section .bss
     buffer:         resb 4096       ; Buffer for directory path
 
