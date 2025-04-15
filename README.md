@@ -1,5 +1,5 @@
 # 🧱 bareutils
-![Progress](https://img.shields.io/badge/progress-30%2F154%20done-brightgreen)
+![Progress](https://img.shields.io/badge/progress-31%2F154%20done-brightgreen)
 
 A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
@@ -137,7 +137,7 @@ make
 - [`sync`](src/sync.asm) Flushes file system buffers
 - [`tabs`](src/tabs.asm) Set terminal tabs
 - [`tac`](src/tac.asm) Concatenates and prints files in reverse order line by line
-- [`tail`](src/tail.asm) Output the end of files
+- [`tail`](src/tail.asm) ✅ Output the end of files
 - [`tee`](src/tee.asm) ✅ Sends output to multiple files
 - [`test`](src/test.asm) Evaluates an expression
 - [`time`](src/time.asm) Display elapsed, system and kernel time used by the current shell or designated process.
