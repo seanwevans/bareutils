@@ -1,5 +1,5 @@
 # 🧱 bareutils
-![Progress](https://img.shields.io/badge/progress-35%2F154%20done-brightgreen)
+![Progress](https://img.shields.io/badge/progress-36%2F154%20done-brightgreen)
 
 A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
@@ -72,7 +72,7 @@ make
 - [`join`](src/join.asm) Merges two sorted text files based on the presence of a common field
 - [`kill`](src/kill.asm) Terminate or signal processes
 - [`link`](src/link.asm) Creates a link to a file
-- [`ln`](src/ln.asm) Creates a link to a file
+- [`ln`](src/ln.asm) ✅ Creates a link to a file
 - [`locale`](src/locale.asm) Get locale-specific information
 - [`localedef`](src/localedef.asm) Define locale environment
 - [`logger`](src/logger.asm) Log messages

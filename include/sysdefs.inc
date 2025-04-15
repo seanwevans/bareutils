@@ -10,12 +10,15 @@
 %define SYS_EXIT        60
 %define SYS_UNAME       63
 
+%define SYS_SYNC        74
 %define SYS_TRUNCATE    76
 %define SYS_FTRUNCATE   77
 %define SYS_GETCWD      79
 
 %define SYS_CHDIR       80
 %define SYS_RMDIR       84
+%define SYS_LINK        86
+%define SYS_SYMLINK     88
 
 %define SYS_CHOWN       92
 %define SYS_UMASK       95
