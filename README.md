@@ -84,7 +84,7 @@ make
 - [`man`](src/man.asm) Display system documentation
 - [`md5sum`](src/md5sum.asm) Computes and checks MD5 message digest
 - [`mesg`](src/mesg.asm) Permit or deny messages
-- [`mkdir`](src/mkdir.asm) Creates directories
+- [`mkdir`](src/mkdir.asm) ✅ Creates directories
 - [`mkfifo`](src/mkfifo.asm) Makes named pipes (FIFOs)
 - [`mknod`](src/mknod.asm) Makes block or character special files
 - [`mktemp`](src/mktemp.asm) Creates a temporary file or directory
