@@ -1,5 +1,5 @@
 # 🧱 bareutils
-![Progress](https://img.shields.io/badge/progress-36%2F154%20done-brightgreen)
+![Progress](https://img.shields.io/badge/progress-38%2F154%20done-brightgreen)
 
 A reimplementation of some core utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 
@@ -65,7 +65,7 @@ make
 - [`groups`](src/groups.asm) Prints the groups of which the user is a member
 - [`hash`](src/hash.asm) Hash database access method
 - [`head`](src/head.asm) ✅ Output the beginning of files
-- [`hostid`](src/hostid.asm) Prints the numeric identifier for the current host
+- [`hostid`](src/hostid.asm) ✅ Prints the numeric identifier for the current host
 - [`iconv`](src/iconv.asm) Codeset conversion
 - [`id`](src/id.asm) ✅ Prints real or effective UID and GID
 - [`install`](src/install.asm) Copies files and set attributes
