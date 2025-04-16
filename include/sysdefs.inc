@@ -10,7 +10,7 @@
 %define SYS_EXIT        60
 %define SYS_UNAME       63
 
-%define SYS_SYNC        74
+%define SYS_FSYNC       74
 %define SYS_TRUNCATE    76
 %define SYS_FTRUNCATE   77
 %define SYS_GETCWD      79
@@ -29,13 +29,15 @@
 
 %define SYS_GETHOSTID   142
 
+%define SYS_SYNC        162
+
 %define SYS_TIME        201
 
 %define SYS_GETENV      211
 
 %define SYS_UTIMENSAT   280
 
-%define AT_FDCWD       -100     ; Used for relative paths with utimensat
+%define AT_FDCWD       -100
 %define SEEK_SET          0
 
 

@@ -1,4 +1,4 @@
-# Baloo 🐻 ![Progress](https://img.shields.io/badge/progress-38%2F154%20done-brightgreen)
+# Baloo 🐻 ![Progress](https://img.shields.io/badge/progress-39%2F154%20done-brightgreen)
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/The_second_jungle_book_%281895%29_%28Baloo%29.jpg" title=" भालू "></img></center>
 
@@ -137,7 +137,7 @@ for whichever `.asm` in `src` you want to compile.
 - [`strings`](src/strings.asm) Find printable strings in files
 - [`stty`](src/stty.asm) Changes and prints terminal line settings
 - [`sum`](src/sum.asm) Checksums and counts the blocks in a file
-- [`sync`](src/sync.asm) Flushes file system buffers
+- [`sync`](src/sync.asm) ✅ Flushes file system buffers
 - [`tabs`](src/tabs.asm) Set terminal tabs
 - [`tac`](src/tac.asm) Concatenates and prints files in reverse order line by line
 - [`tail`](src/tail.asm) ✅ Output the end of files
