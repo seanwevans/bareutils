@@ -1,4 +1,4 @@
-# Baloo 🐻 ![Progress](https://img.shields.io/badge/progress-39%2F154%20done-brightgreen)
+# Baloo 🐻 ![Progress](https://img.shields.io/badge/progress-40%2F154%20done-brightgreen)
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/The_second_jungle_book_%281895%29_%28Baloo%29.jpg" title=" भालू "></img></center>
 
@@ -27,7 +27,7 @@ for whichever `.asm` in `src` you want to compile.
 - [`basenc`](src/basenc.asm) Encodes or decodes various encodings and prints result to standard output
 - [`batch`](src/batch.asm) Schedules commands to be executed in a batch queue
 - [`bc`](src/bc.asm) Arbitrary-precision arithmetic language
-- [`cat`](src/cat.asm) Concatenates and prints files
+- [`cat`](src/cat.asm) ✅ Concatenates and prints files
 - [`cd`](src/cd.asm) ✅ Changes the working directory
 - [`chcon`](src/chcon.asm) Changes file security context
 - [`chgrp`](src/chgrp.asm) Changes file group ownership

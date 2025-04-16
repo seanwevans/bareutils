@@ -40,9 +40,7 @@
 %define AT_FDCWD       -100
 %define SEEK_SET          0
 
-
 %define HOSTID_PATH    "/etc/hostid"
-
 
 %define STDIN_FILENO    0
 %define STDOUT_FILENO   1
