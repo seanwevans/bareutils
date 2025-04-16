@@ -7,6 +7,10 @@
 %define SYS_STAT        4
 %define SYS_LSEEK       8
 
+%define SYS_ACCESS      21
+
+%define SYS_GETPID      39
+
 %define SYS_EXIT        60
 %define SYS_UNAME       63
 
@@ -16,10 +20,12 @@
 %define SYS_GETCWD      79
 
 %define SYS_CHDIR       80
+%define SYS_MKDIR       83
 %define SYS_RMDIR       84
 %define SYS_LINK        86
 %define SYS_SYMLINK     88
 
+%define SYS_CHMOD       90
 %define SYS_CHOWN       92
 %define SYS_UMASK       95
 %define SYS_SYSINFO     99
@@ -37,22 +43,31 @@
 
 %define SYS_UTIMENSAT   280
 
+%define SYS_GETRANDOM   318
+
 %define AT_FDCWD       -100
-%define SEEK_SET          0
+%define SEEK_SET        0
 
 %define HOSTID_PATH    "/etc/hostid"
 
-%define STDIN_FILENO    0
-%define STDOUT_FILENO   1
-%define STDERR_FILENO   2
+%define STDIN_FILENO    0       ; standard in
+%define STDOUT_FILENO   1       ; standard out
+%define STDERR_FILENO   2       ; standard error
 
-%define O_RDONLY        0
-%define O_WRONLY        1
-%define O_RDWR          2
-%define O_CREAT         64
-%define O_TRUNC         512
-%define O_APPEND        1024
+%define O_RDONLY        0       ; Open for read-only
+%define O_WRONLY        1       ; Open for write-only
+%define O_RDWR          2       ; Open for read/write
+%define O_CREAT         64      ; Open for creation
+%define O_EXCL          128     ; Error if file already exists
+%define O_TRUNC         512     ; Open for truncating
+%define O_APPEND        1024    ; Open for appending
 
+%define F_OK            0       ; Test for file existence
+%define X_OK            1       ; Test for execute permission
+%define W_OK            2       ; Test for write permission
+%define R_OK            4       ; Test for read permission
+
+%define DIR_MODE        0o700   ; rwx------
 %define DEFAULT_MODE    0o644   ; rw-r--r--
 
 %define UT_LINESIZE     32      ; Size of tty line field
@@ -83,9 +98,9 @@
 %define DEAD_PROCESS    8       ; Terminated process
 %define ACCOUNTING      9
 
-%define WHITESPACE_SPACE 32     ; ' '
 %define WHITESPACE_TAB  9       ; '\t'
 %define WHITESPACE_NL   10      ; '\n'
+%define WHITESPACE_SPACE 32     ; ' '
 
 ; exit(status)
 %macro exit 1
