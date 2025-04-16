@@ -1,4 +1,4 @@
-# Baloo 🐻 ![Progress](https://img.shields.io/badge/progress-40%2F154%20done-brightgreen)
+# Baloo 🐻 ![Progress](https://img.shields.io/badge/progress-41%2F154%20done-brightgreen)
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/The_second_jungle_book_%281895%29_%28Baloo%29.jpg" title=" भालू "></img></center>
 
@@ -31,7 +31,7 @@ for whichever `.asm` in `src` you want to compile.
 - [`cd`](src/cd.asm) ✅ Changes the working directory
 - [`chcon`](src/chcon.asm) Changes file security context
 - [`chgrp`](src/chgrp.asm) Changes file group ownership
-- [`chmod`](src/chmod.asm) Changes the permissions of a file or directory
+- [`chmod`](src/chmod.asm) ✅ Changes the permissions of a file or directory
 - [`chown`](src/chown.asm) ✅ Changes file ownership
 - [`chroot`](src/chroot.asm) Changes the root directory
 - [`cksum`](src/cksum.asm) Checksums (IEEE Ethernet CRC-32) and count the bytes in a file

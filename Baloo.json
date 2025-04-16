@@ -1,0 +1,926 @@
+[
+  {
+    "name": "alias",
+    "description": "Defines or displays aliases",
+    "glyph": "🏷️",
+    "isDone": false
+  },
+  {
+    "name": "ar",
+    "description": "Creates and maintains libraries",
+    "glyph": "🗄️",
+    "isDone": false
+  },
+  {
+    "name": "arch",
+    "description": "Prints machine hardware name",
+    "glyph": "🏗️",
+    "isDone": true
+  },
+  {
+    "name": "at",
+    "description": "Executes commands at a later time",
+    "glyph": "⏰",
+    "isDone": false
+  },
+  {
+    "name": "awk",
+    "description": "Pattern scanning and processing language",
+    "glyph": "🧵",
+    "isDone": false
+  },
+  {
+    "name": "b2sum",
+    "description": "Computes and checks BLAKE2b message digest",
+    "glyph": "🔏",
+    "isDone": false
+  },
+  {
+    "name": "base32",
+    "description": "Encodes or decodes Base32, and prints result to standard output",
+    "glyph": "📦",
+    "isDone": false
+  },
+  {
+    "name": "base64",
+    "description": "Encodes or decodes Base64, and prints result to standard output",
+    "glyph": "📦",
+    "isDone": false
+  },
+  {
+    "name": "basename",
+    "description": "Removes the path prefix from a given pathname",
+    "glyph": "📄",
+    "isDone": true
+  },
+  {
+    "name": "basenc",
+    "description": "Encodes or decodes various encodings and prints result to standard output",
+    "glyph": "📦",
+    "isDone": false
+  },
+  {
+    "name": "batch",
+    "description": "Schedules commands to be executed in a batch queue",
+    "glyph": "📋",
+    "isDone": false
+  },
+  {
+    "name": "bc",
+    "description": "Arbitrary-precision arithmetic language",
+    "glyph": "🧮",
+    "isDone": false
+  },
+  {
+    "name": "cat",
+    "description": "Concatenates and prints files",
+    "glyph": "📄",
+    "isDone": true
+  },
+  {
+    "name": "cd",
+    "description": "Changes the working directory",
+    "glyph": "🚶",
+    "isDone": true
+  },
+  {
+    "name": "chcon",
+    "description": "Changes file security context",
+    "glyph": "🛡️",
+    "isDone": false
+  },
+  {
+    "name": "chgrp",
+    "description": "Changes file group ownership",
+    "glyph": "👥",
+    "isDone": false
+  },
+  {
+    "name": "chmod",
+    "description": "Changes the permissions of a file or directory",
+    "glyph": "🔒",
+    "isDone": false
+  },
+  {
+    "name": "chown",
+    "description": "Changes file ownership",
+    "glyph": "🔐",
+    "isDone": true
+  },
+  {
+    "name": "chroot",
+    "description": "Changes the root directory",
+    "glyph": "⚙️",
+    "isDone": false
+  },
+  {
+    "name": "cksum",
+    "description": "Checksums (IEEE Ethernet CRC-32) and count the bytes in a file",
+    "glyph": "🧮",
+    "isDone": false
+  },
+  {
+    "name": "cmp",
+    "description": "Compares two files; see also diff",
+    "glyph": "🔍",
+    "isDone": false
+  },
+  {
+    "name": "comm",
+    "description": "Compares two sorted files line by line",
+    "glyph": "☯️",
+    "isDone": false
+  },
+  {
+    "name": "command",
+    "description": "Executes a simple command",
+    "glyph": "⚡",
+    "isDone": false
+  },
+  {
+    "name": "cp",
+    "description": "Copy files/directories",
+    "glyph": "📋",
+    "isDone": true
+  },
+  {
+    "name": "crontab",
+    "description": "Schedule periodic background work",
+    "glyph": "🗓️",
+    "isDone": false
+  },
+  {
+    "name": "csplit",
+    "description": "Splits a file into sections determined by context lines",
+    "glyph": "📑",
+    "isDone": false
+  },
+  {
+    "name": "cut",
+    "description": "Removes sections from each line of files",
+    "glyph": "✂️",
+    "isDone": false
+  },
+  {
+    "name": "date",
+    "description": "Sets or displays the date and time",
+    "glyph": "📅",
+    "isDone": false
+  },
+  {
+    "name": "dd",
+    "description": "Copies and converts a file",
+    "glyph": "💾",
+    "isDone": false
+  },
+  {
+    "name": "df",
+    "description": "Shows disk free space on file systems",
+    "glyph": "💽",
+    "isDone": false
+  },
+  {
+    "name": "diff",
+    "description": "Compare two files; see also cmp",
+    "glyph": "🔍",
+    "isDone": false
+  },
+  {
+    "name": "dircolors",
+    "description": "Set up color for ls",
+    "glyph": "🎨",
+    "isDone": false
+  },
+  {
+    "name": "dirname",
+    "description": "Strips non-directory suffix from file name",
+    "glyph": "📂",
+    "isDone": true
+  },
+  {
+    "name": "du",
+    "description": "Shows disk usage on file systems",
+    "glyph": "📊",
+    "isDone": false
+  },
+  {
+    "name": "echo",
+    "description": "Displays a specified line of text",
+    "glyph": "🗣️",
+    "isDone": true
+  },
+  {
+    "name": "ed",
+    "description": "The standard text editor",
+    "glyph": "📝",
+    "isDone": false
+  },
+  {
+    "name": "env",
+    "description": "Run a program in a modified environment",
+    "glyph": "🌐",
+    "isDone": false
+  },
+  {
+    "name": "expand",
+    "description": "Converts tabs to spaces",
+    "glyph": "➡️",
+    "isDone": true
+  },
+  {
+    "name": "expr",
+    "description": "Evaluates expressions",
+    "glyph": "⚙️",
+    "isDone": false
+  },
+  {
+    "name": "factor",
+    "description": "Factors numbers",
+    "glyph": "🔢",
+    "isDone": true
+  },
+  {
+    "name": "false",
+    "description": "Does nothing, but exits unsuccessfully",
+    "glyph": "❌",
+    "isDone": true
+  },
+  {
+    "name": "file",
+    "description": "Determine file type",
+    "glyph": "📎",
+    "isDone": false
+  },
+  {
+    "name": "find",
+    "description": "Find files",
+    "glyph": "🔎",
+    "isDone": false
+  },
+  {
+    "name": "fmt",
+    "description": "Simple optimal text formatter",
+    "glyph": "📐",
+    "isDone": false
+  },
+  {
+    "name": "fold",
+    "description": "Wraps each input line to fit in specified width",
+    "glyph": "📃",
+    "isDone": false
+  },
+  {
+    "name": "gencat",
+    "description": "Generate a formatted message catalog",
+    "glyph": "🐱",
+    "isDone": false
+  },
+  {
+    "name": "getconf",
+    "description": "Get configuration values",
+    "glyph": "⚙️",
+    "isDone": false
+  },
+  {
+    "name": "getopts",
+    "description": "Parse utility options",
+    "glyph": "⚙️",
+    "isDone": false
+  },
+  {
+    "name": "gettext",
+    "description": "Retrieve text string from messages object",
+    "glyph": "💬",
+    "isDone": false
+  },
+  {
+    "name": "grep",
+    "description": "Search text for a pattern",
+    "glyph": "🔍",
+    "isDone": false
+  },
+  {
+    "name": "groups",
+    "description": "Prints the groups of which the user is a member",
+    "glyph": "👪",
+    "isDone": false
+  },
+  {
+    "name": "hash",
+    "description": "Hash database access method",
+    "glyph": "🔐",
+    "isDone": false
+  },
+  {
+    "name": "head",
+    "description": "Output the beginning of files",
+    "glyph": "⬆️",
+    "isDone": true
+  },
+  {
+    "name": "hostid",
+    "description": "Prints the numeric identifier for the current host",
+    "glyph": "🏷️",
+    "isDone": true
+  },
+  {
+    "name": "iconv",
+    "description": "Codeset conversion",
+    "glyph": "🔄",
+    "isDone": false
+  },
+  {
+    "name": "id",
+    "description": "Prints real or effective UID and GID",
+    "glyph": "🆔",
+    "isDone": true
+  },
+  {
+    "name": "install",
+    "description": "Copies files and set attributes",
+    "glyph": "📥",
+    "isDone": false
+  },
+  {
+    "name": "join",
+    "description": "Merges two sorted text files based on the presence of a common field",
+    "glyph": "🔗",
+    "isDone": false
+  },
+  {
+    "name": "kill",
+    "description": "Terminate or signal processes",
+    "glyph": "⚡",
+    "isDone": false
+  },
+  {
+    "name": "link",
+    "description": "Creates a link to a file",
+    "glyph": "🔗",
+    "isDone": false
+  },
+  {
+    "name": "ln",
+    "description": "Creates a link to a file",
+    "glyph": "🔗",
+    "isDone": true
+  },
+  {
+    "name": "locale",
+    "description": "Get locale-specific information",
+    "glyph": "🌍",
+    "isDone": false
+  },
+  {
+    "name": "localedef",
+    "description": "Define locale environment",
+    "glyph": "🌐",
+    "isDone": false
+  },
+  {
+    "name": "logger",
+    "description": "Log messages",
+    "glyph": "📝",
+    "isDone": false
+  },
+  {
+    "name": "logname",
+    "description": "Print the user's login name",
+    "glyph": "👤",
+    "isDone": true
+  },
+  {
+    "name": "lp",
+    "description": "Send files to a printer",
+    "glyph": "🖨️",
+    "isDone": false
+  },
+  {
+    "name": "ls",
+    "description": "List directory contents with formatting",
+    "glyph": "🔍",
+    "isDone": false
+  },
+  {
+    "name": "m4",
+    "description": "Macro processor",
+    "glyph": "🔄",
+    "isDone": false
+  },
+  {
+    "name": "mailx",
+    "description": "Process messages",
+    "glyph": "📧",
+    "isDone": false
+  },
+  {
+    "name": "man",
+    "description": "Display system documentation",
+    "glyph": "📚",
+    "isDone": false
+  },
+  {
+    "name": "md5sum",
+    "description": "Computes and checks MD5 message digest",
+    "glyph": "🔑",
+    "isDone": false
+  },
+  {
+    "name": "mesg",
+    "description": "Permit or deny messages",
+    "glyph": "📨",
+    "isDone": false
+  },
+  {
+    "name": "mkdir",
+    "description": "Creates directories",
+    "glyph": "📁",
+    "isDone": true
+  },
+  {
+    "name": "mkfifo",
+    "description": "Makes named pipes (FIFOs)",
+    "glyph": "📯",
+    "isDone": false
+  },
+  {
+    "name": "mknod",
+    "description": "Makes block or character special files",
+    "glyph": "🧩",
+    "isDone": false
+  },
+  {
+    "name": "mktemp",
+    "description": "Creates a temporary file or directory",
+    "glyph": "📝",
+    "isDone": false
+  },
+  {
+    "name": "msgfmt",
+    "description": "Create messages objects from messages object files",
+    "glyph": "💬",
+    "isDone": false
+  },
+  {
+    "name": "mv",
+    "description": "Moves files or rename files",
+    "glyph": "🔄",
+    "isDone": false
+  },
+  {
+    "name": "newgrp",
+    "description": "Change to a new group",
+    "glyph": "👥",
+    "isDone": false
+  },
+  {
+    "name": "ngettext",
+    "description": "Retrieve text string from messages object with plural form",
+    "glyph": "💬",
+    "isDone": false
+  },
+  {
+    "name": "nice",
+    "description": "Modifies scheduling priority",
+    "glyph": "👌",
+    "isDone": false
+  },
+  {
+    "name": "nl",
+    "description": "Numbers lines of files",
+    "glyph": "🔢",
+    "isDone": false
+  },
+  {
+    "name": "nohup",
+    "description": "Allows a command to continue running after logging out",
+    "glyph": "🏃",
+    "isDone": false
+  },
+  {
+    "name": "nproc",
+    "description": "Queries the number of (active) processors",
+    "glyph": "🧮",
+    "isDone": true
+  },
+  {
+    "name": "numfmt",
+    "description": "Reformat numbers",
+    "glyph": "🔢",
+    "isDone": false
+  },
+  {
+    "name": "od",
+    "description": "Dumps files in octal and other formats",
+    "glyph": "🔍",
+    "isDone": false
+  },
+  {
+    "name": "paste",
+    "description": "Merge corresponding or subsequent lines of files",
+    "glyph": "📋",
+    "isDone": false
+  },
+  {
+    "name": "patch",
+    "description": "Apply changes to files",
+    "glyph": "🩹",
+    "isDone": false
+  },
+  {
+    "name": "pathchk",
+    "description": "Checks whether file names are valid or portable",
+    "glyph": "✓",
+    "isDone": false
+  },
+  {
+    "name": "pax",
+    "description": "Portable archive interchange",
+    "glyph": "📦",
+    "isDone": false
+  },
+  {
+    "name": "pinky",
+    "description": "A lightweight version of finger",
+    "glyph": "👆",
+    "isDone": false
+  },
+  {
+    "name": "pr",
+    "description": "Paginate or columnate files for printing",
+    "glyph": "🖨️",
+    "isDone": false
+  },
+  {
+    "name": "printenv",
+    "description": "Prints environment variables",
+    "glyph": "🔍",
+    "isDone": true
+  },
+  {
+    "name": "printf",
+    "description": "Formats and prints data",
+    "glyph": "🖊️",
+    "isDone": false
+  },
+  {
+    "name": "ps",
+    "description": "Report process status",
+    "glyph": "📊",
+    "isDone": false
+  },
+  {
+    "name": "ptx",
+    "description": "Produces a permuted index of file contents",
+    "glyph": "🔄",
+    "isDone": false
+  },
+  {
+    "name": "pwd",
+    "description": "Prints the current working directory",
+    "glyph": "🧭",
+    "isDone": true
+  },
+  {
+    "name": "read",
+    "description": "Read a line from standard input",
+    "glyph": "📖",
+    "isDone": false
+  },
+  {
+    "name": "readlink",
+    "description": "Print destination of a symbolic link",
+    "glyph": "👉",
+    "isDone": false
+  },
+  {
+    "name": "realpath",
+    "description": "Returns the resolved absolute or relative path for a file",
+    "glyph": "🛣️",
+    "isDone": false
+  },
+  {
+    "name": "renice",
+    "description": "Set nice values of running processes",
+    "glyph": "👍",
+    "isDone": false
+  },
+  {
+    "name": "rm",
+    "description": "Removes files/directories",
+    "glyph": "🗑️",
+    "isDone": false
+  },
+  {
+    "name": "rmdir",
+    "description": "Removes empty directories",
+    "glyph": "🗂️",
+    "isDone": true
+  },
+  {
+    "name": "runcon",
+    "description": "Run command with specified security context",
+    "glyph": "🔒",
+    "isDone": false
+  },
+  {
+    "name": "sed",
+    "description": "Stream editor",
+    "glyph": "🔧",
+    "isDone": false
+  },
+  {
+    "name": "seq",
+    "description": "Prints a sequence of numbers",
+    "glyph": "🔢",
+    "isDone": true
+  },
+  {
+    "name": "sh",
+    "description": "Shell, the standard command language interpreter",
+    "glyph": "🐚",
+    "isDone": false
+  },
+  {
+    "name": "sha1sum",
+    "description": "Computes and checks SHA-1/SHA-2 message digests",
+    "glyph": "🔏",
+    "isDone": false
+  },
+  {
+    "name": "sha224sum",
+    "description": "Computes and checks SHA-1/SHA-2 message digests",
+    "glyph": "🔏",
+    "isDone": false
+  },
+  {
+    "name": "sha256sum",
+    "description": "Computes and checks SHA-1/SHA-2 message digests",
+    "glyph": "🔏",
+    "isDone": false
+  },
+  {
+    "name": "sha384sum",
+    "description": "Computes and checks SHA-1/SHA-2 message digests",
+    "glyph": "🔏",
+    "isDone": false
+  },
+  {
+    "name": "sha512sum",
+    "description": "Computes and checks SHA-1/SHA-2 message digests",
+    "glyph": "🔏",
+    "isDone": false
+  },
+  {
+    "name": "shred",
+    "description": "Overwrites a file to hide its contents, and optionally deletes it",
+    "glyph": "🔪",
+    "isDone": false
+  },
+  {
+    "name": "shuf",
+    "description": "generates random permutations",
+    "glyph": "🎲",
+    "isDone": false
+  },
+  {
+    "name": "sleep",
+    "description": "Delays for a specified amount of time",
+    "glyph": "💤",
+    "isDone": true
+  },
+  {
+    "name": "sort",
+    "description": "Sorts lines of text files",
+    "glyph": "🔠",
+    "isDone": false
+  },
+  {
+    "name": "split",
+    "description": "Splits a file into pieces",
+    "glyph": "✂️",
+    "isDone": false
+  },
+  {
+    "name": "stat",
+    "description": "Returns data about an inode",
+    "glyph": "📊",
+    "isDone": false
+  },
+  {
+    "name": "stdbuf",
+    "description": "Controls buffering for commands that use stdio",
+    "glyph": "⚙️",
+    "isDone": false
+  },
+  {
+    "name": "strings",
+    "description": "Find printable strings in files",
+    "glyph": "🔤",
+    "isDone": false
+  },
+  {
+    "name": "stty",
+    "description": "Changes and prints terminal line settings",
+    "glyph": "⌨️",
+    "isDone": false
+  },
+  {
+    "name": "sum",
+    "description": "Checksums and counts the blocks in a file",
+    "glyph": "➕",
+    "isDone": false
+  },
+  {
+    "name": "sync",
+    "description": "Flushes file system buffers",
+    "glyph": "🔄",
+    "isDone": true
+  },
+  {
+    "name": "tabs",
+    "description": "Set terminal tabs",
+    "glyph": "➡️",
+    "isDone": false
+  },
+  {
+    "name": "tac",
+    "description": "Concatenates and prints files in reverse order line by line",
+    "glyph": "🔄",
+    "isDone": false
+  },
+  {
+    "name": "tail",
+    "description": "Output the end of files",
+    "glyph": "⬇️",
+    "isDone": true
+  },
+  {
+    "name": "tee",
+    "description": "Sends output to multiple files",
+    "glyph": "🔱",
+    "isDone": true
+  },
+  {
+    "name": "test",
+    "description": "Evaluates an expression",
+    "glyph": "🧪",
+    "isDone": false
+  },
+  {
+    "name": "time",
+    "description": "Display elapsed, system and kernel time",
+    "glyph": "⏰",
+    "isDone": false
+  },
+  {
+    "name": "timeout",
+    "description": "Runs a command with a time limit",
+    "glyph": "⏳",
+    "isDone": false
+  },
+  {
+    "name": "touch",
+    "description": "Changes file timestamps; creates file",
+    "glyph": "✍️",
+    "isDone": true
+  },
+  {
+    "name": "tput",
+    "description": "Change terminal characteristics",
+    "glyph": "⌨️",
+    "isDone": false
+  },
+  {
+    "name": "tr",
+    "description": "Translates or deletes characters",
+    "glyph": "🔄",
+    "isDone": true
+  },
+  {
+    "name": "true",
+    "description": "Does nothing, but exits successfully",
+    "glyph": "✅",
+    "isDone": true
+  },
+  {
+    "name": "truncate",
+    "description": "Shrink the size of a file to the specified size",
+    "glyph": "✂️",
+    "isDone": true
+  },
+  {
+    "name": "tsort",
+    "description": "Performs a topological sort",
+    "glyph": "🔢",
+    "isDone": false
+  },
+  {
+    "name": "tty",
+    "description": "Prints terminal name",
+    "glyph": "🖥️",
+    "isDone": true
+  },
+  {
+    "name": "umask",
+    "description": "Get or set the file mode creation mask",
+    "glyph": "🎭",
+    "isDone": true
+  },
+  {
+    "name": "unalias",
+    "description": "Remove alias definitions",
+    "glyph": "🚫",
+    "isDone": false
+  },
+  {
+    "name": "uname",
+    "description": "Prints system information",
+    "glyph": "💻",
+    "isDone": true
+  },
+  {
+    "name": "unexpand",
+    "description": "Converts spaces to tabs",
+    "glyph": "⬅️",
+    "isDone": true
+  },
+  {
+    "name": "uniq",
+    "description": "Removes duplicate lines from a sorted file",
+    "glyph": "🎯",
+    "isDone": true
+  },
+  {
+    "name": "unlink",
+    "description": "Removes the specified file using the unlink function",
+    "glyph": "🔓",
+    "isDone": false
+  },
+  {
+    "name": "uptime",
+    "description": "Tells how long the system has been running",
+    "glyph": "⏱️",
+    "isDone": true
+  },
+  {
+    "name": "users",
+    "description": "Prints the user names of users currently logged in",
+    "glyph": "👥",
+    "isDone": false
+  },
+  {
+    "name": "uudecode",
+    "description": "Decode a binary file",
+    "glyph": "📥",
+    "isDone": false
+  },
+  {
+    "name": "uuencode",
+    "description": "Encode a binary file",
+    "glyph": "📤",
+    "isDone": false
+  },
+  {
+    "name": "wait",
+    "description": "Await process completion",
+    "glyph": "⌛",
+    "isDone": false
+  },
+  {
+    "name": "wc",
+    "description": "Prints the number of bytes, words, and lines in files",
+    "glyph": "🔢",
+    "isDone": true
+  },
+  {
+    "name": "who",
+    "description": "Prints a list of all users currently logged in",
+    "glyph": "👥",
+    "isDone": true
+  },
+  {
+    "name": "whoami",
+    "description": "Prints the effective userid",
+    "glyph": "👤",
+    "isDone": true
+  },
+  {
+    "name": "write",
+    "description": "Write to another user's terminal",
+    "glyph": "✉️",
+    "isDone": false
+  },
+  {
+    "name": "xargs",
+    "description": "Construct argument lists and invoke utility",
+    "glyph": "🔨",
+    "isDone": false
+  },
+  {
+    "name": "yes",
+    "description": "Prints a string repeatedly",
+    "glyph": "🔁",
+    "isDone": true
+  }
+]
