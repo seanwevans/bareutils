@@ -1,4 +1,4 @@
-# Baloo 🐻 ![Progress](https://img.shields.io/badge/progress-41%2F154%20done-brightgreen)
+# Baloo 🐻 ![Progress](https://img.shields.io/badge/progress-42%2F154%20done-brightgreen)
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/The_second_jungle_book_%281895%29_%28Baloo%29.jpg" title=" भालू "></img></center>
 
@@ -74,7 +74,7 @@ for whichever `.asm` in `src` you want to compile.
 - [`install`](src/install.asm) Copies files and set attributes
 - [`join`](src/join.asm) Merges two sorted text files based on the presence of a common field
 - [`kill`](src/kill.asm) Terminate or signal processes
-- [`link`](src/link.asm) Creates a link to a file
+- [`link`](src/link.asm) ✅ Creates a link to a file
 - [`ln`](src/ln.asm) ✅ Creates a link to a file
 - [`locale`](src/locale.asm) Get locale-specific information
 - [`localedef`](src/localedef.asm) Define locale environment
