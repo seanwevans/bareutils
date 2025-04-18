@@ -7,7 +7,10 @@ SRC=$(wildcard src/*.asm)
 OBJ=$(patsubst src/%.asm,build/%.o,$(SRC))
 BIN=$(patsubst src/%.asm,bin/%,$(SRC))
 
-all: $(BIN)
+all: setup $(BIN)
+
+setup:
+	mkdir -p build bin
 
 build/%.o: src/%.asm
 	$(ASM) -f elf64 $< -o $@
