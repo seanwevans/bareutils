@@ -1,5 +1,5 @@
 # Baloo 🐻 
-![Progress](https://img.shields.io/badge/progress-49%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-50%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/The_second_jungle_book_%281895%29_%28Baloo%29.jpg" title=" भालू "></img></center>
@@ -90,7 +90,7 @@ for whichever `.asm` in `src` you want to compile.
 - [`md5sum`](src/md5sum.asm) Computes and checks MD5 message digest
 - [`mesg`](src/mesg.asm) Permit or deny messages
 - [`mkdir`](src/mkdir.asm) ✅ Creates directories
-- [`mkfifo`](src/mkfifo.asm) Makes named pipes (FIFOs)
+- [`mkfifo`](src/mkfifo.asm) ✅ Makes named pipes (FIFOs)
 - [`mknod`](src/mknod.asm) Makes block or character special files
 - [`mktemp`](src/mktemp.asm) ✅ Creates a temporary file or directory
 - [`msgfmt`](src/msgfmt.asm) Create messages objects from messages object files
