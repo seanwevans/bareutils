@@ -1,5 +1,5 @@
 # Baloo 🐻 
-![Progress](https://img.shields.io/badge/progress-42%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-43%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/The_second_jungle_book_%281895%29_%28Baloo%29.jpg" title=" भालू "></img></center>
@@ -61,7 +61,7 @@ for whichever `.asm` in `src` you want to compile.
 - [`file`](src/file.asm) Determine file type
 - [`find`](src/find.asm) Find files
 - [`fmt`](src/fmt.asm) Simple optimal text formatter
-- [`fold`](src/fold.asm) Wraps each input line to fit in specified width
+- [`fold`](src/fold.asm) ✅ Wraps each input line to fit in specified width
 - [`gencat`](src/gencat.asm) Generate a formatted message catalog
 - [`getconf`](src/getconf.asm) Get configuration values
 - [`getopts`](src/getopts.asm) Parse utility options
