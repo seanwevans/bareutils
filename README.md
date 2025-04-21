@@ -1,5 +1,5 @@
 # Baloo 🐻 
-![Progress](https://img.shields.io/badge/progress-46%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-47%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/The_second_jungle_book_%281895%29_%28Baloo%29.jpg" title=" भालू "></img></center>
@@ -37,7 +37,7 @@ for whichever `.asm` in `src` you want to compile.
 - [`chown`](src/chown.asm) ✅ Changes file ownership
 - [`chroot`](src/chroot.asm) Changes the root directory
 - [`cksum`](src/cksum.asm) Checksums (IEEE Ethernet CRC-32) and count the bytes in a file
-- [`cmp`](src/cmp.asm) Compares two files; see also diff
+- [`cmp`](src/cmp.asm) ✅ Compares two files; see also diff
 - [`comm`](src/comm.asm) Compares two sorted files line by line
 - [`command`](src/command.asm) Executes a simple command
 - [`cp`](src/cp.asm) ✅ Copy files/directories
