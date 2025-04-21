@@ -1,5 +1,5 @@
 # Baloo 🐻 
-![Progress](https://img.shields.io/badge/progress-51%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-52%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/The_second_jungle_book_%281895%29_%28Baloo%29.jpg" title=" भालू "></img></center>
@@ -24,7 +24,7 @@ for whichever `.asm` in `src` you want to compile.
 - [`awk`](src/awk.asm) Pattern scanning and processing language
 - [`b2sum`](src/b2sum.asm) Computes and checks BLAKE2b message digest
 - [`base32`](src/base32.asm) Encodes or decodes Base32, and prints result to standard output
-- [`base64`](src/base64.asm) Encodes or decodes Base64, and prints result to standard output
+- [`base64`](src/base64.asm) ✅ Prints a file's contents in Base64 to standard output
 - [`basename`](src/basename.asm) ✅ Removes the path prefix from a given pathname
 - [`basenc`](src/basenc.asm) Encodes or decodes various encodings and prints result to standard output
 - [`batch`](src/batch.asm) Schedules commands to be executed in a batch queue
