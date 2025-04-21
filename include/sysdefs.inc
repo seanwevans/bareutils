@@ -44,6 +44,7 @@
 %define SYS_TIME        201
 
 %define SYS_GETENV      211
+%define SYS_GETDENTS64  217
 
 %define SYS_UTIMENSAT   280
 

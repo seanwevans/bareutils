@@ -1,5 +1,5 @@
 # Baloo 🐻 
-![Progress](https://img.shields.io/badge/progress-50%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-51%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/The_second_jungle_book_%281895%29_%28Baloo%29.jpg" title=" भालू "></img></center>
@@ -83,7 +83,7 @@ for whichever `.asm` in `src` you want to compile.
 - [`logger`](src/logger.asm) Log messages
 - [`logname`](src/logname.asm) ✅ Print the user's login name
 - [`lp`](src/lp.asm) Send files to a printer
-- [`ls`](src/ls.asm) List directory contents with formatting
+- [`ls`](src/ls.asm) ✅ List directory contents with formatting
 - [`m4`](src/m4.asm) Macro processor
 - [`mailx`](src/mailx.asm) Process messages
 - [`man`](src/man.asm) Display system documentation
