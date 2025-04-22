@@ -26,6 +26,7 @@
 %define SYS_LINK        86
 %define SYS_UNLINK      87
 %define SYS_SYMLINK     88
+%define SYS_READLINK    89
 
 %define SYS_CHMOD       90
 %define SYS_CHOWN       92
@@ -67,21 +68,21 @@
 %define O_TRUNC         512     ; Open for truncating
 %define O_APPEND        1024    ; Open for appending
 
-%define S_IFIFO         0o010000 ; FIFO file type
-%define S_IRUSR         0o0400   ; Read permission for owner
-%define S_IWUSR         0o0200   ; Write permission for owner
-%define S_IRGRP         0o0040   ; Read permission for group
-%define S_IWGRP         0o0020   ; Write permission for group
-%define S_IROTH         0o0004   ; Read permission for others
-%define S_IWOTH         0o0002   ; Write permission for others
+%define S_IFIFO       0o010000  ; FIFO file type
+%define S_IRUSR       0o0400    ; Read permission for owner
+%define S_IWUSR       0o0200    ; Write permission for owner
+%define S_IRGRP       0o0040    ; Read permission for group
+%define S_IWGRP       0o0020    ; Write permission for group
+%define S_IROTH       0o0004    ; Read permission for others
+%define S_IWOTH       0o0002    ; Write permission for others
 
 %define F_OK            0       ; Test for file existence
 %define X_OK            1       ; Test for execute permission
 %define W_OK            2       ; Test for write permission
 %define R_OK            4       ; Test for read permission
 
-%define DIR_MODE        0o700   ; rwx------
-%define DEFAULT_MODE    0o644   ; rw-r--r--
+%define DIR_MODE      0o700     ; rwx------
+%define DEFAULT_MODE  0o644     ; rw-r--r--
 
 %define UT_LINESIZE     32      ; Size of tty line field
 %define UT_NAMESIZE     32      ; Size of username field
