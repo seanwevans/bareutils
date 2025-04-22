@@ -1,5 +1,5 @@
 # Baloo 🐻 
-![Progress](https://img.shields.io/badge/progress-55%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-56%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/The_second_jungle_book_%281895%29_%28Baloo%29.jpg" title=" भालू "></img></center>
@@ -161,7 +161,7 @@ for whichever `.asm` in `src` you want to compile.
 - [`uniq`](src/uniq.asm) ✅ Removes duplicate lines from a sorted file
 - [`unlink`](src/unlink.asm) ✅ Removes the specified file using the unlink function
 - [`uptime`](src/uptime.asm) ✅ Tells how long the system has been running
-- [`users`](src/users.asm) Prints the user names of users currently logged into the current host
+- [`users`](src/users.asm) ✅ Prints the user names of users currently logged into the current host
 - [`uudecode`](src/uudecode.asm) Decode a binary file
 - [`uuencode`](src/uuencode.asm) Encode a binary file
 - [`wait`](src/wait.asm) Await process completion
