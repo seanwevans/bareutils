@@ -11,6 +11,8 @@
 
 %define SYS_GETPID      39
 
+%define SYS_EXECVE      59
+
 %define SYS_EXIT        60
 %define SYS_UNAME       63
 
@@ -40,6 +42,7 @@
 
 %define SYS_GETHOSTID   142
 
+%define SYS_CHROOT      161
 %define SYS_SYNC        162
 
 %define SYS_TIME        201
