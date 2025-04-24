@@ -88,16 +88,15 @@
 %define DIR_MODE      0o700     ; rwx------
 %define DEFAULT_MODE  0o644     ; rw-r--r--
 
-%define UT_LINESIZE     32      ; Size of tty line field
-%define UT_NAMESIZE     32      ; Size of username field
-%define UT_HOSTSIZE     256     ; Size of hostname field
-
 %define UT_TYPE_OFF     0       ; short   ut_type;       (Offset 0,   Size 2)
 %define UT_PID_OFF      4       ; pid_t   ut_pid;        (Offset 4,   Size 4)
 %define UT_LINE_OFF     8       ; char    ut_line[32];   (Offset 8,   Size 32)
+%define UT_LINESIZE     32      ; Size of tty line field
+%define UT_NAMESIZE     32      ; Size of username field
 %define UT_ID_OFF       40      ; char    ut_id[4];      (Offset 40,  Size 4)
 %define UT_USER_OFF     44      ; char    ut_user[32];   (Offset 44,  Size 32)
 %define UT_HOST_OFF     76      ; char    ut_host[256];  (Offset 76,  Size 256)
+%define UT_HOSTSIZE     256     ; Size of hostname field
 %define UT_EXIT_OFF     332     ; struct  exit_status;   (Offset 332, Size 4)
 %define UT_SESSION_OFF  336     ; int32_t ut_session;    (Offset 336, Size 4)
 %define UT_TV_OFF       340     ; struct  timeval32;     (Offset 340, Size 8)
@@ -136,4 +135,17 @@
     mov rsi, %2                 ; buffer address
     mov rdx, %3                 ; buffer length
     syscall
+%endmacro
+
+; Calculates string length
+;    Inputs: rsi = string address
+;   Outputs: rbx = string length
+%macro strlen 0
+    xor rbx, rbx
+%%loop:
+    cmp byte [rsi + rbx], 0
+    je %%done
+    inc rbx
+    jmp %%loop
+%%done:
 %endmacro

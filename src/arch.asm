@@ -3,34 +3,22 @@
 %include "include/sysdefs.inc"
 
 section .bss
-    uts resb 390
+    uts     resb 390            ; struct utsname
 
 section .data
+    nl      db WHITESPACE_NL
 
 section .text
-    global _start
+    global  _start
 
 _start:
     mov     rax, SYS_UNAME
     mov     rdi, uts
-    syscall
+    syscall 
 
-    lea     rsi, [uts + 260]    ; uts + 260 is the .machine field
-    call    strlen
+    lea     rsi, [uts + 260]    ; .machine field
+    strlen
 
-    write   1, rsi, rbx
-    write   1, newline, 1
+    write   STDOUT_FILENO, rsi, rbx
+    write   STDOUT_FILENO, nl, 1
     exit    0
-
-strlen:
-    xor     rbx, rbx
-.loop:
-    cmp     byte [rsi + rbx], 0
-    je      .done
-    inc     rbx
-    jmp     .loop
-.done:
-    ret
-
-section .data
-    newline db 10
