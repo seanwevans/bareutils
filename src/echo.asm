@@ -5,25 +5,24 @@
 section .bss
 
 section .data
-    newline db 10
+    newline     db WHITESPACE_NL
 
 section .text
-    global _start
+    global      _start
 
 _start:
-    mov rsi, rsp          ; rsi = stack pointer
-    mov rdi, [rsi]        ; argc
-    add rsi, 8            ; argv[0]
-    add rsi, 8            ; argv[1]
+    mov         rsi, rsp          ; stack pointer
+    mov         rdi, [rsi]        ; argc
+    add         rsi, 8            ; argv[0]
+    add         rsi, 8            ; argv[1]
+    cmp         rdi, 1
+    jle         .print_nl
 
-    cmp rdi, 1
-    jle .print_nl
+    mov         rsi, [rsi]
+    call        strlen
 
-    mov rsi, [rsi]        ; deref argv[1]
-    call strlen
-
-    write 1, rsi, rbx     ; stdout, str, len
+    write       1, rsi, rbx
 
 .print_nl:
-    write 1, newline, 1
-    exit 0
+    write       1, newline, 1
+    exit        0

@@ -2,6 +2,10 @@
 
 %include "include/sysdefs.inc"
 
+section .bss
+    args_ptr        resq 1
+    env_ptr         resq 1
+
 section .data
     error_msg       db "Error: Usage: chroot <directory>", 10, 0
     error_len       equ $ - error_msg
@@ -16,17 +20,12 @@ section .data
     shell_path      db "/bin/sh", 0
     root_path       db "/", 0
     
-section .bss
-    args_ptr        resq 1              ; pointer to array of argument pointers
-    env_ptr         resq 1              ; pointer to array of environment variable pointers
-
 section .text
     global          _start
 
 _start:
-    pop             r10                 ; r10 = argc
-
-    cmp             r10, 2              ; Need at least 2 arguments (program name + directory)
+    pop             r10                 ; argc
+    cmp             r10, 2
     jl              usage_error         ; If argc < 2, show usage and exit
 
     mov             rbx, rsp            ; rbx = argv (address of first argument pointer)
