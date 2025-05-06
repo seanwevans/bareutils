@@ -52,13 +52,3 @@ _start:
 .exit:    
     exit 0
 
-; strlen(rdi) -> rcx
-strlen:
-    xor rcx, rcx
-.loop:
-    cmp byte [rdi + rcx], 0
-    je .done
-    inc rcx
-    jmp .loop
-.done:
-    ret

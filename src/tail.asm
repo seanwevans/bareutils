@@ -44,7 +44,7 @@ parse_args:
     dec rcx
 
     cmp byte [rdi], '-'
-    jne open_file                     ; Not a flag, must be filename
+    jne open_file_tail                     ; Not a flag, must be filename
 
     movzx rax, byte [rdi + 1]
 
@@ -85,7 +85,7 @@ handle_separate_n:
 
     jmp parse_args
     
-open_file:
+open_file_tail:
 
     mov rax, SYS_OPEN
     mov rsi, O_RDONLY

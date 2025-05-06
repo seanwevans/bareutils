@@ -154,16 +154,6 @@ copy_string:
     jnz .loop                   ; Continue if not null
     ret
 
-strlen:
-    xor rax, rax                ; Initialize length counter
-.loop:
-    cmp byte [rdi + rax], 0     ; Check if current byte is null
-    je .done                    ; If null, we're done
-    inc rax                     ; Increment length counter
-    jmp .loop                   ; Continue
-.done:
-    ret
-
 strcmp:
     push rcx                    ; Save rcx
     xor rcx, rcx                ; Initialize counter
