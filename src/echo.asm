@@ -27,14 +27,3 @@ _start:
 .print_nl:
     write 1, newline, 1
     exit 0
-
-; strlen(rsi) -> rbx
-strlen:
-    xor rbx, rbx
-.strlen_loop:
-    cmp byte [rsi + rbx], 0
-    je .strlen_done
-    inc rbx
-    jmp .strlen_loop
-.strlen_done:
-    ret

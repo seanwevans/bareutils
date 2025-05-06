@@ -17,7 +17,7 @@ _start:
     syscall 
 
     lea     rsi, [uts + 260]    ; .machine field
-    strlen
+    call    strlen
 
     write   STDOUT_FILENO, rsi, rbx
     write   STDOUT_FILENO, nl, 1
