@@ -8,6 +8,8 @@
 %define SYS_LSEEK       8
 %define SYS_MMAP        9
 
+%define SYS_IOCTL       16
+
 %define SYS_ACCESS      21
 
 %define SYS_GETPID      39

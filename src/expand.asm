@@ -39,7 +39,6 @@ process_char:
 
     movzx       rax, byte [rsi + r8]
     inc         r8
-
     cmp         al, 9               ; tab
     je          handle_tab
 
@@ -48,7 +47,6 @@ process_char:
 
     mov         [rdi + r9], al
     inc         r9
-
     inc         qword [col_pos]
     jmp         check_buffer_full
     

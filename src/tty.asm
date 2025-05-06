@@ -9,37 +9,34 @@ section .bss
 section .data
     fd_path     db "/proc/self/fd/0", 0
     not_a_tty   db "not a tty", 10
-    newline     db 10
+    newline     db WHITESPACE_NL
 
 section .text
-    global _start
+    global      _start
 
-_start:
-    ; Is stdin a TTY? (ioctl with TCGETS)
-    mov     rax, 16                 ; SYS_ioctl
-    mov     rdi, 0                  ; stdin
-    mov     rsi, 0x5401             ; TCGETS
-    lea     rdx, [termios_buf]
+_start:    
+    mov         rax, SYS_IOCTL
+    mov         rdi, STDIN_FILENO
+    mov         rsi, 0x5401         ; TCGETS
+    lea         rdx, [termios_buf]
     syscall
 
-    test    rax, rax
-    js      .notty                 ; not a tty if ioctl fails
-
-    ; readlink("/proc/self/fd/0") → result_buf
-    mov     rax, 89                 ; SYS_readlink
+    test        rax, rax
+    js          .notty              ; not a tty if ioctl fails
+    
+    mov     rax, SYS_READLINK       ; readlink("/proc/self/fd/0") → result_buf
     lea     rdi, [fd_path]
     lea     rsi, [result_buf]
     mov     rdx, 128
     syscall
 
     test    rax, rax
-    js      .notty                 ; should never happen here
-
-    ; write result_buf to stdout
-    mov     rdi, 1                  ; stdout
+    js      .notty                  ; should never happen here
+    
+    mov     rdi, STDOUT_FILENO
     mov     rsi, result_buf
-    mov     rdx, rax                ; rax = bytes read
-    mov     rax, 1                  ; SYS_write
+    mov     rdx, rax                ; bytes read
+    mov     rax, SYS_WRITE
     syscall
 
     write   1, newline, 1

@@ -5,13 +5,13 @@
 section .bss
 
 section .data
-    msg db "y", 10
-    len equ $ - msg
+    msg     db "y", 10
+    len     equ $ - msg
 
 section .text
-    global _start
+    global  _start
 
 _start:
 .loop:
-    write 1, msg, len
-    jmp .loop
+    write   1, msg, len
+    jmp     .loop

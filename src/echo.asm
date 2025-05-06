@@ -11,7 +11,7 @@ section .text
     global      _start
 
 _start:
-    mov         rsi, rsp          ; stack pointer
+    mov         rsi, rsp
     mov         rdi, [rsi]        ; argc
     add         rsi, 8            ; argv[0]
     add         rsi, 8            ; argv[1]

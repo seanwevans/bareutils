@@ -7,7 +7,7 @@ section .bss
 section .data
 
 section .text
-    global _start
+    global  _start
 
 _start:
-    exit 0
+    exit    0

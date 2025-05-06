@@ -3,10 +3,10 @@
 %include "include/sysdefs.inc"
 
 section .text
-    global _start
+    global  _start
 
 _start:
-    mov rax, SYS_SYNC
+    mov     rax, SYS_SYNC
     syscall
 
-    exit 0
+    exit    0
