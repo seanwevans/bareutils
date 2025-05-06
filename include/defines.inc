@@ -38,7 +38,10 @@
 %define SYS_SYSINFO     99
 
 %define SYS_GETUID      102
+%define SYS_GETGID      104
 %define SYS_GETEUID     107
+
+%define SYS_GETGROUPS   115
 
 %define SYS_MKNOD       133
 
