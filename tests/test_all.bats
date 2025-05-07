@@ -36,6 +36,15 @@ teardown(){ rm -rf "$TMP"; }
   assert_success
 }
 
+@test "chgrp — changes group ownership" {  
+  touch "$TMP/testfile"    
+  current_group=$(id -g)    
+  run "$BIN/chgrp" "$current_group" "$TMP/testfile"
+  assert_success    
+  file_group=$(stat -c %g "$TMP/testfile")
+  assert_equal "$file_group" "$current_group"
+}
+
 @test "chmod — changes mode" {
   touch "$TMP/f"
   run "$BIN/chmod" 600 "$TMP/f"

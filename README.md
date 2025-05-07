@@ -32,7 +32,7 @@ for whichever `.asm` in `src` you want to compile.
 - [`cat`](src/cat.asm) ✅ Concatenates and prints files
 - [`cd`](src/cd.asm) ✅ Changes the working directory
 - [`chcon`](src/chcon.asm) Changes file security context
-- [`chgrp`](src/chgrp.asm) Changes file group ownership
+- [`chgrp`](src/chgrp.asm) ✅ Changes file group ownership
 - [`chmod`](src/chmod.asm) ✅ Changes the permissions of a file or directory
 - [`chown`](src/chown.asm) ✅ Changes file ownership
 - [`chroot`](src/chroot.asm) ✅ Changes the root directory
