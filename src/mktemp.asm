@@ -204,7 +204,7 @@ get_random_char:
     
 .continue_mapping:
     cmp         al, 10
-    jl .        digits                  ; 0-9 -> '0'-'9' (48-57)
+    jl          .digits                 ; 0-9 -> '0'-'9' (48-57)
     
     cmp         al, 36
     jl          .lowercase              ; 10-35 -> 'a'-'z' (97-122)
