@@ -3,8 +3,8 @@
 %include "include/sysdefs.inc"
 
 section .bss
-    dirbuf      resb 256    ; buffer to hold directory name
-    readlen     resq 1      ; to store read length
+    dirbuf      resb 256            ; buffer to hold directory name
+    readlen     resq 1              ; to store read length
 
 section .data
     usage_msg   db "Usage: mkdir [dirname]", 10
@@ -14,9 +14,9 @@ section .text
     global      _start
 
 _start:
-    mov         r12, [rsp]  ; argc
+    mov         r12, [rsp]          ; argc
     cmp         r12, 2
-    jne         .read_stdin ; if no argument, read from stdin
+    jne         .read_stdin         ; if no argument, read from stdin
 
     mov         r13, [rsp + 16]     ; pointer to dirname
     jmp         .mkdir

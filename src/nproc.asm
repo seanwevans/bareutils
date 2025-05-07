@@ -3,9 +3,9 @@
 %include "include/sysdefs.inc"
 
 section .bss
-    cpuset      resb 128    ; cpu_set_t (1024 bits)
-    num_buffer  resb 20     ; integer to string conversion
-    num_end     resb 1      ; Marks end of num_buffer
+    cpuset      resb 128            ; cpu_set_t (1024 bits)
+    num_buffer  resb 20             ; integer to string conversion
+    num_end     resb 1              ; Marks end of num_buffer
 
 section .data
     newline     db WHITESPACE_NL

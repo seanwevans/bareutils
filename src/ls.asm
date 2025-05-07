@@ -2,15 +2,15 @@
 
 %include "include/sysdefs.inc"
 
-%define BUFFER_SIZE     8192            ; Buffer for reading directory entries
-%define NAME_MAX        255             ; Maximum length of a filename
+%define BUFFER_SIZE 8192                ; Buffer for reading directory entries
+%define NAME_MAX    255                 ; Maximum length of a filename
 
 struc dirent64
-    .d_ino    resq 1                    ; 64-bit inode number
-    .d_off    resq 1                    ; 64-bit offset to next structure
-    .d_reclen resw 1                    ; 16-bit size of this dirent
-    .d_type   resb 1                    ; 8-bit file type
-    .d_name   resb 1                    ; Filename (null-terminated)
+    .d_ino      resq 1                  ; 64-bit inode number
+    .d_off      resq 1                  ; 64-bit offset to next structure
+    .d_reclen   resw 1                  ; 16-bit size of this dirent
+    .d_type     resb 1                  ; 8-bit file type
+    .d_name     resb 1                  ; Filename (null-terminated)
 endstruc
 
 section .data
@@ -23,95 +23,80 @@ section .bss
     dirp        resq 1                  ; Directory pointer (file descriptor)
     
 section .text
-    global _start
+    global      _start
 
 _start:
-    pop rdi                             ; Get argc
-    cmp rdi, 1                          ; If argc == 1, use default dir
-    je .use_default_dir
+    pop         rdi                     ; argc
+    cmp         rdi, 1                  ; If argc == 1, use default dir
+    je          .use_default_dir
 
-    pop rsi                             ; Skip argv[0] (program name)
-    pop rsi                             ; Get argv[1] (directory name)
-    jmp .open_dir
+    pop         rsi                     ; Skip argv[0] (program name)
+    pop         rsi                     ; Get argv[1] (directory name)
+    jmp         .open_dir
     
 .use_default_dir:
-    mov rsi, current_dir                ; Use "." as default directory
+    mov         rsi, current_dir        ; Use "." as default directory
 
 .open_dir:
-    mov rax, SYS_OPEN                   ; open syscall
-    mov rdi, rsi                        ; Directory path
-    mov rsi, O_RDONLY                   ; Read-only access
+    mov         rax, SYS_OPEN
+    mov         rdi, rsi                ; Directory path
+    mov         rsi, O_RDONLY
     syscall
 
-    cmp rax, 0
-    jl .exit_error
+    cmp         rax, 0
+    jl          .exit_error
 
-    mov [dirp], rax
+    mov         [dirp], rax
 
 .read_dir:
-    mov rax, SYS_GETDENTS64             ; getdents64 syscall
-    mov rdi, [dirp]                     ; Directory fd
-    mov rsi, buffer                     ; Buffer for entries
-    mov rdx, BUFFER_SIZE                ; Buffer size
+    mov         rax, SYS_GETDENTS64     ; getdents64 syscall
+    mov         rdi, [dirp]             ; Directory fd
+    mov         rsi, buffer             ; Buffer for entries
+    mov         rdx, BUFFER_SIZE        ; Buffer size
     syscall
 
-    cmp rax, 0
-    jle .close_dir                      ; If <= 0, we're done or error
+    cmp         rax, 0
+    jle         .close_dir              ; If <= 0, we're done or error
 
-    mov r12, rax                        ; Save bytes read
-    xor r13, r13                        ; Initialize offset to 0
+    mov         r12, rax                ; Save bytes read
+    xor         r13, r13                ; Initialize offset to 0
 
 .process_entries:
-    cmp r13, r12
-    jge .read_dir                       ; Get more entries if needed
-
-    lea rdi, [buffer + r13]
-
-    movzx r14, word [rdi + dirent64.d_reclen]
-
-    lea rsi, [rdi + dirent64.d_name]
-
-    cmp byte [rsi], '.'
-    jne .print_entry
-    cmp byte [rsi + 1], 0
-    je .next_entry
-    cmp byte [rsi + 1], '.'
-    jne .print_entry
-    cmp byte [rsi + 2], 0
-    je .next_entry
+    cmp         r13, r12
+    jge         .read_dir               ; Get more entries if needed
+    
+    lea         rdi, [buffer + r13]
+    movzx       r14, word [rdi + dirent64.d_reclen]
+    lea         rsi, [rdi + dirent64.d_name]
+    cmp         byte [rsi], '.'
+    jne         .print_entry
+    
+    cmp         byte [rsi + 1], 0
+    je          .next_entry
+    
+    cmp         byte [rsi + 1], '.'
+    jne         .print_entry
+    
+    cmp         byte [rsi + 2], 0
+    je          .next_entry
 
 .print_entry:
-    mov rdi, rsi
-    xor rcx, rcx    ; Counter for string length
+    mov         rdi, rsi
+    xor         rcx, rcx                ; Counter for string length
     
-.strlen_loop:
-    cmp byte [rdi], 0
-    je .strlen_done
-    inc rdi
-    inc rcx
-    jmp .strlen_loop
-    
-.strlen_done:
-    test rcx, rcx
-    jz .next_entry
-
-    write STDOUT_FILENO, rsi, rcx
-
-    write STDOUT_FILENO, space, 1
-
 .next_entry:
-    add r13, r14
-    jmp .process_entries
+    add         r13, r14
+    jmp         .process_entries
 
 .close_dir:
-    write STDOUT_FILENO, newline, 1
+    write       STDOUT_FILENO, newline, 1
 
-    mov rax, SYS_CLOSE
-    mov rdi, [dirp]
+    mov         rax, SYS_CLOSE
+    mov         rdi, [dirp]
     syscall
 
 .exit_success:
-    exit 0
+    exit        0
 
 .exit_error:
-    exit 1
+    exit        1

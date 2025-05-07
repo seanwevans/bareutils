@@ -2,14 +2,14 @@
 
 %include "include/sysdefs.inc"
 
+section .bss
+    utmp_buf    resb UTMP_SIZE          ; utmp record
+    username    resb UT_NAMESIZE        ; username
+
 section .data
     utmp_path   db "/var/run/utmp", 0   ; Path to the utmp file
     space       db " ", 0               ; Space delimiter between usernames
     newline     db 10, WHITESPACE_NL
-
-section .bss
-    utmp_buf    resb UTMP_SIZE          ; utmp record
-    username    resb UT_NAMESIZE        ; username
 
 section .text
     global      _start

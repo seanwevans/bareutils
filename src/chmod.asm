@@ -2,15 +2,15 @@
 
 %include "include/sysdefs.inc"
 
+section .bss
+    mode            resq 1          ; file mode
+    filename:       resb 256        ; file name
+    
 section .data
     error_usage     db "Usage: chmod mode file", 10, 0
     error_usage_len equ $ - error_usage
     error_chmod     db "chmod: Failed to change file mode", 10, 0
     error_chmod_len equ $ - error_chmod
-
-section .bss
-    mode            resq 1          ; file mode
-    filename:       resb 256        ; file name
     
 section .text
     global          _start

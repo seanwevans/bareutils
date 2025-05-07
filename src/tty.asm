@@ -24,24 +24,24 @@ _start:
     test        rax, rax
     js          .notty              ; not a tty if ioctl fails
     
-    mov     rax, SYS_READLINK       ; readlink("/proc/self/fd/0") → result_buf
-    lea     rdi, [fd_path]
-    lea     rsi, [result_buf]
-    mov     rdx, 128
+    mov         rax, SYS_READLINK   ; readlink("/proc/self/fd/0") → result_buf
+    lea         rdi, [fd_path]
+    lea         rsi, [result_buf]
+    mov         rdx, 128
     syscall
 
-    test    rax, rax
-    js      .notty                  ; should never happen here
+    test        rax, rax
+    js          .notty              ; should never happen here
     
-    mov     rdi, STDOUT_FILENO
-    mov     rsi, result_buf
-    mov     rdx, rax                ; bytes read
-    mov     rax, SYS_WRITE
+    mov         rdi, STDOUT_FILENO
+    mov         rsi, result_buf
+    mov         rdx, rax            ; bytes read
+    mov         rax, SYS_WRITE
     syscall
 
-    write   1, newline, 1
-    exit    0
+    write       1, newline, 1
+    exit        0
 
 .notty:
-    write   1, not_a_tty, 10
-    exit    1
+    write       1, not_a_tty, 10
+    exit        1
