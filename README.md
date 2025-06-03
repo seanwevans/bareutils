@@ -1,5 +1,5 @@
 # Baloo 🐻 
-![Progress](https://img.shields.io/badge/progress-57%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-58%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="assets/Baloo.jpg" title=" भालू "></img></center>
@@ -67,7 +67,7 @@ for whichever `.asm` in `src` you want to compile.
 - [`getopts`](src/getopts.asm) Parse utility options
 - [`gettext`](src/gettext.asm) Retrieve text string from messages object
 - [`grep`](src/grep.asm) Search text for a pattern
-- [`groups`](src/groups.asm) Prints the groups of which the user is a member
+- [`groups`](src/groups.asm) ✅ Prints the groups of which the user is a member
 - [`hash`](src/hash.asm) Hash database access method
 - [`head`](src/head.asm) ✅ Output the beginning of files
 - [`hostid`](src/hostid.asm) ✅ Prints the numeric identifier for the current host
