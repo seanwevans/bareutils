@@ -1,6 +1,5 @@
 # Baloo 🐻 
-![Progress](https://img.shields.io/badge/progress-57%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
-
+![Progress](https://img.shields.io/badge/progress-57%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg) 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="assets/Baloo.jpg" title=" भालू "></img></center>
 
@@ -15,6 +14,12 @@ nasm -f elf64 <input_file.asm> -o <output_binary_name>.o
 ld -o <output_binary_name> <output_binary_name>.o
 ```
 for whichever `.asm` in `src` you want to compile.
+
+## 🧪 Testing
+Install `bats`, `bats-assert`, and `bats-support` then run:
+```
+make test
+```
 
 ## Catalog
 - [`alias`](src/alias.asm) Defines or displays aliases
