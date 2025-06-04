@@ -116,6 +116,11 @@ teardown(){ rm -rf "$TMP"; }
   [ "$(echo "$output" | head -1 | wc -c)" -le 21 ]    # 20 chars + newline
 }
 
+@test "groups — prints numeric groups" {
+  run "$BIN/groups"
+  assert_output "$(id -G)"
+}
+
 @test "head — first line only" {
   printf '1\n2\n3\n' >"$TMP/l"
   run "$BIN/head" -n 1 "$TMP/l"

@@ -20,3 +20,6 @@ bin/%: build/%.o
 
 clean:
 	rm -f build/*.o bin/*
+
+test: all
+	bats tests/test_all.bats
