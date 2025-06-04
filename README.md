@@ -1,5 +1,7 @@
 # Baloo 🐻 
+
 ![Progress](https://img.shields.io/badge/progress-58%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="assets/Baloo.jpg" title=" भालू "></img></center>
@@ -97,7 +99,7 @@ python3 scripts/asmfmt.py src/example.asm
 - [`mailx`](src/mailx.asm) Process messages
 - [`man`](src/man.asm) Display system documentation
 - [`md5sum`](src/md5sum.asm) Computes and checks MD5 message digest
-- [`mesg`](src/mesg.asm) Permit or deny messages
+- [`mesg`](src/mesg.asm) ✅ Permit or deny messages
 - [`mkdir`](src/mkdir.asm) ✅ Creates directories
 - [`mkfifo`](src/mkfifo.asm) ✅ Makes named pipes (FIFOs)
 - [`mknod`](src/mknod.asm) Makes block or character special files
@@ -116,10 +118,10 @@ python3 scripts/asmfmt.py src/example.asm
 - [`patch`](src/patch.asm) Apply changes to files
 - [`pathchk`](src/pathchk.asm) Checks whether file names are valid or portable
 - [`pax`](src/pax.asm) Portable archive interchange
-- [`pinky`](src/pinky.asm) A lightweight version of finger
+- [`pinky`](src/pinky.asm) ✅ A lightweight version of finger
 - [`pr`](src/pr.asm) Paginate or columnate files for printing
 - [`printenv`](src/printenv.asm) ✅ Prints environment variables
-- [`printf`](src/printf.asm) Formats and prints data
+- [`printf`](src/printf.asm) ✅ Formats and prints data
 - [`ps`](src/ps.asm) Report process status
 - [`ptx`](src/ptx.asm) Produces a permuted index of file contents
 - [`pwd`](src/pwd.asm) ✅ Prints the current working directory
@@ -177,8 +179,8 @@ python3 scripts/asmfmt.py src/example.asm
 - [`wc`](src/wc.asm) ✅ Prints the number of bytes, words, and lines in files
 - [`who`](src/who.asm) ✅ Prints a list of all users currently logged in
 - [`whoami`](src/whoami.asm) ✅ Prints the effective userid
-- [`write`](src/write.asm) Write to another user's terminal
-- [`xargs`](src/xargs.asm) Construct argument lists and invoke utility
+- [`write`](src/write.asm) ✅ Write to another user's terminal
+- [`xargs`](src/xargs.asm) ✅ Construct argument lists and invoke utility
 - [`yes`](src/yes.asm) ✅ Prints a string repeatedly
 
 ## Benchmark
