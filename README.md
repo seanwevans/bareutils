@@ -180,3 +180,6 @@ python3 scripts/asmfmt.py src/example.asm
 - [`write`](src/write.asm) Write to another user's terminal
 - [`xargs`](src/xargs.asm) Construct argument lists and invoke utility
 - [`yes`](src/yes.asm) ✅ Prints a string repeatedly
+
+## Benchmark
+Run `make` to build all binaries, then execute `./benchmark.sh` to compare a few Baloo programs against the system implementations using `hyperfine`.

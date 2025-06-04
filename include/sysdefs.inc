@@ -18,6 +18,8 @@ section .data
     error_msg_write db "Error writing file", 10
     error_msg_write_len equ $ - error_msg_write
 
+section .text
+
 open_file:
     cmp rsi, 0
     je .use_default
