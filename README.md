@@ -1,5 +1,6 @@
 # Baloo 🐻 
-![Progress](https://img.shields.io/badge/progress-63%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+
+![Progress](https://img.shields.io/badge/progress-58%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="assets/Baloo.jpg" title=" भालू "></img></center>
@@ -15,6 +16,15 @@ nasm -f elf64 <input_file.asm> -o <output_binary_name>.o
 ld -o <output_binary_name> <output_binary_name>.o
 ```
 for whichever `.asm` in `src` you want to compile.
+
+## 🧪 Testing
+Install `bats`, `bats-assert`, and `bats-support` then run:
+```make test```
+
+## 📐 Formatting
+
+Use `scripts/asmfmt.py` to keep assembly files consistent. By default it indents instructions with four spaces and aligns comments to column 40.
+python3 scripts/asmfmt.py src/example.asm
 
 ## Catalog
 - [`alias`](src/alias.asm) Defines or displays aliases
@@ -67,8 +77,8 @@ for whichever `.asm` in `src` you want to compile.
 - [`getopts`](src/getopts.asm) Parse utility options
 - [`gettext`](src/gettext.asm) Retrieve text string from messages object
 - [`grep`](src/grep.asm) Search text for a pattern
-- [`groups`](src/groups.asm) Prints the groups of which the user is a member
-- [`hash`](src/hash.asm) ✅ Hash database access method
+- [`groups`](src/groups.asm) ✅ Prints the groups of which the user is a member
+- [`hash`](src/hash.asm) Hash database access method
 - [`head`](src/head.asm) ✅ Output the beginning of files
 - [`hostid`](src/hostid.asm) ✅ Prints the numeric identifier for the current host
 - [`iconv`](src/iconv.asm) Codeset conversion
@@ -171,3 +181,6 @@ for whichever `.asm` in `src` you want to compile.
 - [`write`](src/write.asm) ✅ Write to another user's terminal
 - [`xargs`](src/xargs.asm) ✅ Construct argument lists and invoke utility
 - [`yes`](src/yes.asm) ✅ Prints a string repeatedly
+
+## Benchmark
+Run `make` to build all binaries, then execute `./benchmark.sh` to compare a few Baloo programs against the system implementations using `hyperfine`.
