@@ -17,3 +17,11 @@ jobs:
       run: make clean
     - name: Compile
       run: make
+    - name: Install test dependencies
+      run: |
+        sudo apt-get install -y bats bats-assert bats-support
+        mkdir -p tests/test_helper
+        ln -s /usr/lib/bats/bats-support tests/test_helper/bats-support
+        ln -s /usr/lib/bats/bats-assert tests/test_helper/bats-assert
+    - name: Test
+      run: make test
