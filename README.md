@@ -184,3 +184,6 @@ python3 scripts/asmfmt.py src/example.asm
 
 ## Benchmark
 Run `make` to build all binaries, then execute `./benchmark.sh` to compare a few Baloo programs against the system implementations using `hyperfine`.
+
+## License
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
