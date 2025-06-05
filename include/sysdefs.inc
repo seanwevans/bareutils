@@ -1,15 +1,17 @@
 ; include/sysdefs.inc
 
-%include "include/defines.inc"
-%include "include/macros.inc"
+    %include "include/defines.inc"
+    %include "include/macros.inc"
 
 section .bss
 
 section .text
-    global open_file
-    global open_dest_file
-    global strlen
-    
+global open_file
+global open_dest_file
+global strlen
+global close_file
+global read_all
+
 section .data
     error_msg_open db "Error opening file", 10
     error_msg_open_len equ $ - error_msg_open
@@ -55,7 +57,7 @@ open_dest_file:
 .fail:
     write STDERR_FILENO, error_msg_open, error_msg_open_len
     exit 1
-    
+
 strlen:
     xor rbx, rbx
 .loop:
@@ -64,4 +66,22 @@ strlen:
     inc rbx
     jmp .loop
 .done:
+    ret
+
+close_file:
+    cmp rdi, STDERR_FILENO
+    jle .done
+    mov rax, SYS_CLOSE
+    syscall
+.done:
+    ret
+
+read_all:
+    mov rax, SYS_READ
+    syscall
+    cmp rax, 0
+    jge .ok
+    write STDERR_FILENO, error_msg_read, error_msg_read_len
+    exit 1
+.ok:
     ret
