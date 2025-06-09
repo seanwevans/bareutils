@@ -88,7 +88,7 @@ python3 scripts/asmfmt.py src/example.asm
 - [`kill`](src/kill.asm) ✅ Terminate or signal processes
 - [`link`](src/link.asm) ✅ Creates a link to a file
 - [`ln`](src/ln.asm) ✅ Creates a link to a file
-- [`locale`](src/locale.asm) Get locale-specific information
+- [`locale`](src/locale.asm) ✅ Get locale-specific information
 - [`localedef`](src/localedef.asm) Define locale environment
 - [`logger`](src/logger.asm) Log messages
 - [`logname`](src/logname.asm) ✅ Print the user's login name
