@@ -1,6 +1,6 @@
 # Baloo 🐻 
 
-![Progress](https://img.shields.io/badge/progress-58%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-59%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="assets/Baloo.jpg" title=" भालू "></img></center>
@@ -49,7 +49,7 @@ python3 scripts/asmfmt.py src/example.asm
 - [`cksum`](src/cksum.asm) Checksums (IEEE Ethernet CRC-32) and count the bytes in a file
 - [`cmp`](src/cmp.asm) ✅ Compares two files; see also diff
 - [`comm`](src/comm.asm) Compares two sorted files line by line
-- [`command`](src/command.asm) Executes a simple command
+- [`command`](src/command.asm) ✅ Executes a simple command
 - [`cp`](src/cp.asm) ✅ Copy files/directories
 - [`crontab`](src/crontab.asm) Schedule periodic background work
 - [`csplit`](src/csplit.asm) Splits a file into sections determined by context lines
