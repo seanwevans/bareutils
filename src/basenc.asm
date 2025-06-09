@@ -1,4 +1,4 @@
-; src/base64.asm
+; src/basenc.asm
 
 %include "include/sysdefs.inc"
 
