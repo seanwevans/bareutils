@@ -204,6 +204,11 @@ teardown(){ rm -rf "$TMP"; }
   [[ "$output" -ge 1 ]]
 }
 
+@test "numfmt — converts bytes" {
+  run "$BIN/numfmt" 2048
+  assert_output '2K'
+}
+
 @test "printenv — returns PATH value" {
   run "$BIN/printenv" PATH
   assert_output "$PATH"
