@@ -1,6 +1,6 @@
 # Baloo 🐻 
 
-![Progress](https://img.shields.io/badge/progress-58%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-59%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="assets/Baloo.jpg" title=" भालू "></img></center>
@@ -70,7 +70,7 @@ python3 scripts/asmfmt.py src/example.asm
 - [`false`](src/false.asm) ✅ Does nothing, but exits unsuccessfully
 - [`file`](src/file.asm) ✅ Determine file type
 - [`find`](src/find.asm) Find files
-- [`fmt`](src/fmt.asm) Simple optimal text formatter
+- [`fmt`](src/fmt.asm) ✅ Simple optimal text formatter
 - [`fold`](src/fold.asm) ✅ Wraps each input line to fit in specified width
 - [`gencat`](src/gencat.asm) Generate a formatted message catalog
 - [`getconf`](src/getconf.asm) Get configuration values
