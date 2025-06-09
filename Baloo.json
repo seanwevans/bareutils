@@ -3,13 +3,13 @@
     "name": "alias",
     "description": "Defines or displays aliases",
     "glyph": "🏷️",
-    "isDone": false
+    "isDone": true
   },
   {
     "name": "ar",
     "description": "Creates and maintains libraries",
     "glyph": "🗄️",
-    "isDone": false
+    "isDone": true
   },
   {
     "name": "arch",
@@ -495,7 +495,7 @@
     "name": "nohup",
     "description": "Allows a command to continue running after logging out",
     "glyph": "🏃",
-    "isDone": false
+    "isDone": true
   },
   {
     "name": "nproc",
