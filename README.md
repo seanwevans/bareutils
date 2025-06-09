@@ -1,6 +1,6 @@
 # Baloo 🐻 
 
-![Progress](https://img.shields.io/badge/progress-58%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-59%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="assets/Baloo.jpg" title=" भालू "></img></center>
@@ -63,7 +63,7 @@ python3 scripts/asmfmt.py src/example.asm
 - [`du`](src/du.asm) Shows disk usage on file systems
 - [`echo`](src/echo.asm) ✅ Displays a specified line of text
 - [`ed`](src/ed.asm) The standard text editor
-- [`env`](src/env.asm) Run a program in a modified environment
+- [`env`](src/env.asm) ✅ Run a program in a modified environment
 - [`expand`](src/expand.asm) ✅ Converts tabs to spaces
 - [`expr`](src/expr.asm) Evaluates expressions
 - [`factor`](src/factor.asm) ✅ Factors numbers
