@@ -1,6 +1,6 @@
 # Baloo 🐻 
 
-![Progress](https://img.shields.io/badge/progress-58%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-59%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="assets/Baloo.jpg" title=" भालू "></img></center>
@@ -58,7 +58,7 @@ python3 scripts/asmfmt.py src/example.asm
 - [`dd`](src/dd.asm) Copies and converts a file
 - [`df`](src/df.asm) Shows disk free space on file systems
 - [`diff`](src/diff.asm) Compare two files; see also cmp
-- [`dircolors`](src/dircolors.asm) Set up color for ls
+- [`dircolors`](src/dircolors.asm) ✅ Set up color for ls
 - [`dirname`](src/dirname.asm) ✅ Strips non-directory suffix from file name
 - [`du`](src/du.asm) Shows disk usage on file systems
 - [`echo`](src/echo.asm) ✅ Displays a specified line of text
