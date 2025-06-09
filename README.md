@@ -1,6 +1,6 @@
 # Baloo 🐻 
 
-![Progress](https://img.shields.io/badge/progress-58%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-59%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="assets/Baloo.jpg" title=" भालू "></img></center>
@@ -83,7 +83,7 @@ python3 scripts/asmfmt.py src/example.asm
 - [`hostid`](src/hostid.asm) ✅ Prints the numeric identifier for the current host
 - [`iconv`](src/iconv.asm) Codeset conversion
 - [`id`](src/id.asm) ✅ Prints real or effective UID and GID
-- [`install`](src/install.asm) Copies files and set attributes
+- [`install`](src/install.asm) ✅ Copies files and set attributes
 - [`join`](src/join.asm) Merges two sorted text files based on the presence of a common field
 - [`kill`](src/kill.asm) ✅ Terminate or signal processes
 - [`link`](src/link.asm) ✅ Creates a link to a file
