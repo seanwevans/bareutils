@@ -1,6 +1,6 @@
 # Baloo 🐻 
 
-![Progress](https://img.shields.io/badge/progress-58%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-59%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="assets/Baloo.jpg" title=" भालू "></img></center>
@@ -38,7 +38,7 @@ python3 scripts/asmfmt.py src/example.asm
 - [`basename`](src/basename.asm) ✅ Removes the path prefix from a given pathname
 - [`basenc`](src/basenc.asm) Encodes or decodes various encodings and prints result to standard output
 - [`batch`](src/batch.asm) Schedules commands to be executed in a batch queue
-- [`bc`](src/bc.asm) Arbitrary-precision arithmetic language
+ - [`bc`](src/bc.asm) ✅ Arbitrary-precision arithmetic language
 - [`cat`](src/cat.asm) ✅ Concatenates and prints files
 - [`cd`](src/cd.asm) ✅ Changes the working directory
 - [`chcon`](src/chcon.asm) Changes file security context
