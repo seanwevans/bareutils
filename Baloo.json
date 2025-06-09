@@ -57,7 +57,7 @@
     "name": "basenc",
     "description": "Encodes or decodes various encodings and prints result to standard output",
     "glyph": "🔡",
-    "isDone": false
+    "isDone": true
   },
   {
     "name": "batch",
