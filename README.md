@@ -112,7 +112,7 @@ python3 scripts/asmfmt.py src/example.asm
 - [`nohup`](src/nohup.asm) Allows a command to continue running after logging out
 - [`nproc`](src/nproc.asm) ✅ Queries the number of (active) processors
 - [`numfmt`](src/numfmt.asm) Reformat numbers
-- [`od`](src/od.asm) Dumps files in octal and other formats
+- [`od`](src/od.asm) ✅ Dumps files in octal and other formats
 - [`paste`](src/paste.asm) Merge corresponding or subsequent lines of files
 - [`patch`](src/patch.asm) Apply changes to files
 - [`pathchk`](src/pathchk.asm) Checks whether file names are valid or portable
