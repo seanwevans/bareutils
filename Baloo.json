@@ -381,7 +381,7 @@
     "name": "logger",
     "description": "Log messages",
     "glyph": "📓",
-    "isDone": false
+    "isDone": true
   },
   {
     "name": "logname",
