@@ -1,6 +1,6 @@
 # Baloo 🐻 
 
-![Progress](https://img.shields.io/badge/progress-58%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-59%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="assets/Baloo.jpg" title=" भालू "></img></center>
@@ -108,7 +108,7 @@ python3 scripts/asmfmt.py src/example.asm
 - [`newgrp`](src/newgrp.asm) Change to a new group
 - [`ngettext`](src/ngettext.asm) Retrieve text string from messages object with plural form
 - [`nice`](src/nice.asm) Modifies scheduling priority
-- [`nl`](src/nl.asm) Numbers lines of files
+- [`nl`](src/nl.asm) ✅ Numbers lines of files
 - [`nohup`](src/nohup.asm) Allows a command to continue running after logging out
 - [`nproc`](src/nproc.asm) ✅ Queries the number of (active) processors
 - [`numfmt`](src/numfmt.asm) Reformat numbers
