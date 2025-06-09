@@ -352,3 +352,8 @@ teardown(){ rm -rf "$TMP"; }
   assert_success
   [ "$(echo \"$output\" | wc -l)" -eq 3 ]
 }
+
+@test "logger — logs message" {
+  run "$BIN/logger" "hello"
+  assert_success
+}
