@@ -3,7 +3,7 @@
     "name": "alias",
     "description": "Defines or displays aliases",
     "glyph": "🏷️",
-    "isDone": false
+    "isDone": true
   },
   {
     "name": "ar",
