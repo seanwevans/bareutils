@@ -1,6 +1,6 @@
 # Baloo 🐻 
 
-![Progress](https://img.shields.io/badge/progress-58%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
+![Progress](https://img.shields.io/badge/progress-59%2F154%20done-brightgreen) ![Build Status](https://github.com/seanwevans/baloo/actions/workflows/makefile.yml/badge.svg)
 
 Just the bear utilities in x86_64 assembly using direct syscalls only — no libc or dependencies.
 <center><img src="assets/Baloo.jpg" title=" भालू "></img></center>
@@ -76,7 +76,7 @@ python3 scripts/asmfmt.py src/example.asm
 - [`getconf`](src/getconf.asm) Get configuration values
 - [`getopts`](src/getopts.asm) Parse utility options
 - [`gettext`](src/gettext.asm) Retrieve text string from messages object
-- [`grep`](src/grep.asm) Search text for a pattern
+- [`grep`](src/grep.asm) ✅ Search text for a pattern
 - [`groups`](src/groups.asm) ✅ Prints the groups of which the user is a member
 - [`hash`](src/hash.asm) Hash database access method
 - [`head`](src/head.asm) ✅ Output the beginning of files
