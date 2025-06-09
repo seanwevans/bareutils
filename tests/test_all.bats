@@ -104,6 +104,11 @@ teardown(){ rm -rf "$TMP"; }
   assert_failure
 }
 
+@test "csplit — not implemented" {
+  run "$BIN/csplit"
+  assert_failure
+}
+
 @test "file — identifies ELF binary" {
   run "$BIN/file" "$BIN/arch"
   assert_success
