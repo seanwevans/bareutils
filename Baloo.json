@@ -369,7 +369,7 @@
     "name": "locale",
     "description": "Get locale-specific information",
     "glyph": "🌍",
-    "isDone": false
+    "isDone": true
   },
   {
     "name": "localedef",
