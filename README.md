@@ -33,7 +33,7 @@ python3 scripts/asmfmt.py src/example.asm
 - [`at`](src/at.asm) Executes commands at a later time
 - [`awk`](src/awk.asm) Pattern scanning and processing language
 - [`b2sum`](src/b2sum.asm) Computes and checks BLAKE2b message digest
-- [`base32`](src/base32.asm) Encodes or decodes Base32, and prints result to standard output
+- [`base32`](src/base32.asm) ✅ Encodes or decodes Base32, and prints result to standard output
 - [`base64`](src/base64.asm) ✅ Prints a file's contents in Base64 to standard output
 - [`basename`](src/basename.asm) ✅ Removes the path prefix from a given pathname
 - [`basenc`](src/basenc.asm) Encodes or decodes various encodings and prints result to standard output

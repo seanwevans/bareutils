@@ -39,7 +39,7 @@
     "name": "base32",
     "description": "Encodes or decodes Base32, and prints result to standard output",
     "glyph": "3️⃣",
-    "isDone": false
+    "isDone": true
   },
   {
     "name": "base64",

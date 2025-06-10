@@ -20,6 +20,12 @@ teardown(){ rm -rf "$TMP"; }
   assert_output 'aGk='
 }
 
+@test "base32 — encodes stdin" {
+  printf 'hello' | run "$BIN/base32"
+  assert_success
+  assert_output 'NBSWY3DP'
+}
+
 @test "basename — strips directories" {
   run "$BIN/basename" "/usr/local/bin/foo"
   assert_output "foo"
